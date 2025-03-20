@@ -87,7 +87,7 @@ const CancellationPolicy: React.FC = () => {
           本ポリシーは予告なく変更される場合がございます。<br />
           最新のポリシーは常にウェブサイト上でご確認いただけます。
         </p>
-        <p className="policy-date">最終更新日: 2023年10月1日</p>
+        <p className="policy-date">最終更新日: 2025年4月1日</p>
       </div>
     </div>
   );

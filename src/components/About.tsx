@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './About.css';
 import aboutImage from '../assets/about/about-profile.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 const About: React.FC = () => {
+  // コンポーネントがマウントされたときにスクロール位置をトップにリセット
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="about-container">
       <h1 className="about-title">About</h1>
@@ -67,10 +72,10 @@ const About: React.FC = () => {
           デフォルメだけどどこか似ているイラストになったアナタに、
           </p>
           <p>
-          きっと愛着が湧いちゃう “キャラクターチック” なイラストと、
+          きっと愛着が湧いちゃう "キャラクターチック" なイラストと、
           </p>
           <p>
-          “オトナカワイイ” を意識した、甘すぎず・シックすぎずなカラーリングで、
+          "オトナカワイイ" を意識した、甘すぎず・シックすぎずなカラーリングで、
           </p>
           <p>
           ずっとアナタの側に寄り添い続ける、愛おしいイラストを心を込めてお描きします。

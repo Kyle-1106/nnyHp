@@ -23,7 +23,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-start; /* 上部に配置するために変更 */
-  padding-top: 120px; /* 上部の余白を増やす */
   margin-bottom: 0;
   position: relative;
   background: linear-gradient(to bottom, 
@@ -56,15 +55,35 @@
   position: absolute;
   background-color: white;
   border-radius: 50%;
-  opacity: 0;
+  opacity: 0.3;
   animation: twinkle 4s infinite;
-  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 0 5px 2px rgba(255, 255, 255, 0.7),
+    0 0 10px 4px rgba(255, 255, 255, 0.3);
 }
 
 @keyframes twinkle {
-  0% { opacity: 0; transform: scale(0.8); }
-  50% { opacity: 1; transform: scale(1.2); }
-  100% { opacity: 0; transform: scale(0.8); }
+  0% { 
+    opacity: 0.3; 
+    transform: scale(0.9);
+    box-shadow: 
+      0 0 5px 2px rgba(255, 255, 255, 0.5),
+      0 0 10px 3px rgba(255, 255, 255, 0.2);
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.2);
+    box-shadow: 
+      0 0 8px 3px rgba(255, 255, 255, 0.8),
+      0 0 15px 5px rgba(255, 255, 255, 0.4);
+  }
+  100% { 
+    opacity: 0.3; 
+    transform: scale(0.9);
+    box-shadow: 
+      0 0 5px 2px rgba(255, 255, 255, 0.5),
+      0 0 10px 3px rgba(255, 255, 255, 0.2);
+  }
 }
 
 /* 月のイラスト */
@@ -72,7 +91,7 @@
   position: relative;
   display: inline-block;
   z-index: 2;
-  margin-top: -40px; /* 上に移動するためのマージン */
+  margin-top: -10px; /* 上に移動するためのマージン */
 }
 
 .hero-image img {
@@ -256,6 +275,10 @@
   margin-bottom: 40px;
   color: #6a8ba6;
   font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+.voice-subtitle {
+  margin-bottom: 20px;
 }
 
 /* Works カルーセル */
@@ -558,11 +581,13 @@
 
 .order-steps {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: nowrap;
   width: 100%;
-  gap: 50px;
+  gap: 40px;
   padding: 20px 0;
+  position: relative;
+  margin: 0 auto;
 }
 
 .order-step {
@@ -571,14 +596,17 @@
   align-items: center;
   position: relative;
   margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .step-number {
   font-size: 1.5rem;
   font-weight: bold;
   color: #6a8ba6;
-  margin-bottom: 10px;
+  /* margin-bottom: 5px; */
   font-family: 'Playfair Display', serif;
+  text-align: center;
 }
 
 .step-content {
@@ -597,7 +625,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
@@ -607,7 +635,7 @@
 }
 
 .step-title {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 5px;
   color: #333;
@@ -621,8 +649,9 @@
 
 .step-arrow {
   position: absolute;
-  top: 120px;
-  right: -40px;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
   color: #6a8ba6;
   font-size: 1.3rem;
   z-index: 2;
@@ -634,6 +663,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px 20px;
+    width: 100%;
   }
   
   .order-step {
@@ -647,8 +677,13 @@
   }
   
   .step-arrow {
-    right: -10px;
-    top: 60px;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    margin: 0;
   }
   
   /* 3つ目のステップの後に矢印を非表示（折り返し時） */
@@ -725,7 +760,6 @@
   
   .order-step {
     width: 100%;
-    max-width: 400px;
     margin-bottom: 40px;
   }
   
@@ -736,8 +770,8 @@
   
   /* モバイル表示時のステップタイトルも明示的に設定 */
   .service-order .step-title {
-    font-size: 1.5rem !important;
-    color: #6a8ba6;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
   }
   
   .step-description {
@@ -745,9 +779,14 @@
   }
   
   .step-arrow {
-    position: static;
-    transform: rotate(90deg);
-    margin: 10px 0;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    margin: 0;
+    margin-top: 10px;
     font-size: 1.5rem;
   }
   
@@ -1131,6 +1170,7 @@
   .order-steps {
     justify-content: center;
     gap: 30px;
+    width: 100%;
   }
   
   .order-step {
@@ -1158,4 +1198,11 @@
   .step-description {
     font-size: 0.95rem;
   }
+}
+
+.order-step h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #6a8ba6;
+  text-align: center;
 } 

@@ -43,23 +43,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 // カスタム矢印コンポーネント
-const PrevArrow = (props: any) => {
-  const { className, onClick } = props;
-  return (
-    <div className={`${className} custom-arrow prev-arrow`} onClick={onClick}>
-      <FontAwesomeIcon icon={faChevronLeft} />
-    </div>
-  );
-};
 
-const NextArrow = (props: any) => {
-  const { className, onClick } = props;
-  return (
-    <div className={`${className} custom-arrow next-arrow`} onClick={onClick}>
-      <FontAwesomeIcon icon={faChevronRight} />
-    </div>
-  );
-};
 
 // FAQアコーディオンコンポーネント
 interface FAQItemProps {
@@ -99,11 +83,8 @@ interface OrderStepProps {
 const OrderStep: React.FC<OrderStepProps> = ({ number, title, description, image, isLast = false }) => {
   return (
     <div className="order-step">
-      <div className="step-number">{number}</div>
       <div className="step-content">
-        <div className="step-image">
-          <img src={image} alt={`ステップ${number}: ${title}`} />
-        </div>
+        <div className="step-number">{number}</div>
         <h3 className="step-title">{title}</h3>
         <p className="step-description">{description}</p>
       </div>
@@ -138,7 +119,8 @@ const Home: React.FC = () => {
     image: '',
     title: '',
     description: '',
-    category: ''
+    category: '',
+    images: [] as string[]
   });
   
   // FAQの開閉を切り替える関数
@@ -196,12 +178,17 @@ const Home: React.FC = () => {
     const heroHeight = hero.offsetHeight;
     
     // 通常の星
-    for (let i = 0; i < 50; i++) {
-      const size = Math.random() * 3 + 1;
+    for (let i = 0; i < 20; i++) {
+      // 星のサイズをよりバリエーション豊かに
+      const size = Math.random() * 3.5 + 0.5;
       const left = Math.random() * heroWidth;
-      const top = Math.random() * heroHeight * 0.7; // 上部70%に配置
-      const delay = Math.random() * 4;
-      const duration = Math.random() * 2 + 3;
+      const top = Math.random() * heroHeight * 0.8; // 上部80%に配置
+      // アニメーションの遅延をより分散
+      const delay = Math.random() * 5;
+      // アニメーションの持続時間もバリエーション豊かに
+      const duration = Math.random() * 3 + 2;
+      // ランダムで輝く強さも変える
+      const opacity = 0.2 + Math.random() * 0.4;
       
       stars.push(
         <div
@@ -213,7 +200,8 @@ const Home: React.FC = () => {
             left: `${left}px`,
             top: `${top}px`,
             animationDelay: `${delay}s`,
-            animationDuration: `${duration}s`
+            animationDuration: `${duration}s`,
+            opacity: opacity
           }}
         />
       );
@@ -232,8 +220,6 @@ const Home: React.FC = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -478,7 +464,7 @@ const Home: React.FC = () => {
 
       <section className="voice-preview" id="voice-section">
         <h2>Voice</h2>
-        <p>お客様から頂いたお写真や感謝のお言葉を掲載させていただいています。</p>
+        <p className="voice-subtitle">お客様から頂いたお写真や感謝のお言葉を掲載させていただいています。</p>
         <div className="voice-carousel">
           <Slider {...voiceSliderSettings}>
             {voiceData.map((voice) => (

@@ -5,26 +5,6 @@ import './Modal.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
-// カスタム矢印コンポーネント
-const PrevArrow = (props: any) => {
-  const { className, onClick } = props;
-  return (
-    <div className={`${className} custom-arrow prev-arrow`} onClick={onClick}>
-      <FontAwesomeIcon icon={faChevronLeft} />
-    </div>
-  );
-};
-
-const NextArrow = (props: any) => {
-  const { className, onClick } = props;
-  return (
-    <div className={`${className} custom-arrow next-arrow`} onClick={onClick}>
-      <FontAwesomeIcon icon={faChevronRight} />
-    </div>
-  );
-};
 
 interface VoiceModalProps {
   isOpen: boolean;
@@ -53,9 +33,10 @@ const VoiceModal: React.FC<VoiceModalProps> = ({
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    arrows: true
   };
 
   // モーダル外をクリックした時に閉じる

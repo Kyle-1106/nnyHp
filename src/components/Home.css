@@ -141,6 +141,19 @@
   margin-top: 40px !important;
 }
 
+.concept-subtitle {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.concept-text {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 .about-text p {
   margin-bottom: 15px;
 }

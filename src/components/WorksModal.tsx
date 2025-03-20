@@ -9,7 +9,6 @@ interface WorksModalProps {
   image: string;
   title: string;
   description: string;
-  category: string;
 }
 
 const WorksModal: React.FC<WorksModalProps> = ({ 
@@ -17,8 +16,7 @@ const WorksModal: React.FC<WorksModalProps> = ({
   onClose, 
   image, 
   title, 
-  description, 
-  category 
+  description
 }) => {
   if (!isOpen) return null;
 

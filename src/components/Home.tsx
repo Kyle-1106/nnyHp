@@ -129,7 +129,7 @@ const Home: React.FC = () => {
     image: '',
     title: '',
     description: '',
-    category: ''
+
   });
   
   // Voiceモーダルの状態管理
@@ -151,9 +151,10 @@ const Home: React.FC = () => {
   };
   
   // Worksモーダルを開く関数
-  const openWorksModal = (image: string, title: string, description: string, category: string) => {
-    console.log("モーダルを開きます:", image, title, description, category);
-    setWorksModalContent({ image, title, description, category });
+  const openWorksModal = (image: string, title: string, description: string
+  ) => {
+    console.log("モーダルを開きます:", image, title, description);
+    setWorksModalContent({ image, title, description});
     setWorksModalOpen(true);
   };
   
@@ -164,10 +165,19 @@ const Home: React.FC = () => {
   };
   
   // Voiceモーダルを開く関数
-  const openVoiceModal = (image: string, title: string, description: string, category: string) => {
-    console.log("Voiceモーダルを開きます:", image, title, description, category);
-    setVoiceModalContent({ image, title, description, category });
-    setVoiceModalOpen(true);
+  const openVoiceModal = (personId: string) => {
+    const person = voiceData.find(v => v.id === personId);
+    if (person) {
+      console.log("Voiceモーダルを開きます:", person.id, person.title);
+      setVoiceModalContent({
+        image: person.image,
+        title: person.title,
+        description: person.description,
+        images: person.images,
+        category: person.category
+      });
+      setVoiceModalOpen(true);
+    }
   };
   
   // Voiceモーダルを閉じる関数
@@ -306,91 +316,69 @@ const Home: React.FC = () => {
   const worksData = [
     {
       image: illust1,
-      title: "ウェディングイラスト",
-      description: "新郎新婦様の特徴を捉えた温かみのあるイラストです。結婚式当日のウェルカムボードとして使用されました。お二人のこだわりのポーズや小物も取り入れ、世界に一つだけの作品に仕上げています。",
-      category: "ウェディング"
+      title: "ブラックスタイルもカワイく！",
+      description: "• ブラックスタイルもキャラクターチックなカワイイイラストに\n\n• サングラスの下も表情もしっかり描き込んでいるので、サングラスから透けて見えるおふたりの目がキュート",
     },
     {
       image: illust2,
-      title: "結婚証明書",
-      description: "結婚式で使用される結婚証明書です。お二人とゲストの皆様の署名スペースを設けつつ、装飾的なデザインで華やかに仕上げました。フレームに入れて飾ることができるサイズで制作しています。",
-      category: "ウェディング"
+      title: "こだわりの前撮り衣装を思い出に残す",
+      description: "• 前撮りで着たポップな衣装をイラストに残しました。色味もこだわって忠実に再現。\n\n• 背景の色味は落ち着いた色味で、オシャレ感を演出",
     },
     {
       image: illust3,
-      title: "ペットとの記念イラスト",
-      description: "大切なペットと一緒の記念イラストです。飼い主様とペットの絆が伝わるような温かい雰囲気で描いています。記念日のプレゼントや思い出として喜ばれています。",
-      category: "ペット"
+      title: "おふたりの趣味やお気に入りのアイテムを取り入れて...",
+      description: "• フーケは前撮りで実際に持っていた物そっくりに\n\n• おふたりが野球ファンとの事で、新郎さまの左手にはグロープを\n\n• 結婚式の日取りに合わせた春らしさとフーケの色味\n\nに合わせた、オレンジとピンクの淡いチェック柄",
     },
     {
       image: illust4,
-      title: "家族イラスト",
-      description: "ご家族全員が揃った記念イラストです。それぞれの個性や特徴を大切にしながら、家族の温かさが伝わるように描いています。記念日や贈り物として人気があります。",
-      category: "ファミリー"
+      title: "愛するペットとのイラストもお任せください",
+      description: "• お写真を元に少しポーズを変えて、キャラクター感のあるイラストに\n\n• 写真撮影で少し緊張ぎみのワンちゃんの表情も忠実に再現\n\n• ドレスのレース刺繍も丁寧に描き込み",
     },
     {
       image: illust5,
-      title: "アニバーサリーイラスト",
-      description: "結婚記念日や特別な記念日のためのイラストです。思い出の場所や大切な瞬間を背景に、お二人の姿を描いています。時間が経っても色あせない思い出として残ります。",
-      category: "アニバーサリー"
+      title: "思い出の場所と思い入れのあるドレス…",
+      description: "• 前撮りのロケーションを背景に。おふたりが際立つ色味に調整しました。\n\n• お母様の手作りドレスの思い出もイラストに閉じ込めるように、レース刺繍も丁寧に描き込み",
     },
     {
       image: illust6,
-      title: "サンキューカード",
-      description: "結婚式の引き出物に添えるサンキューカードです。新郎新婦様のイラストと共に、感謝の気持ちを伝えるメッセージを入れることができます。ゲストへの心のこもった贈り物になります。",
-      category: "ウェディング"
+      title: "お写真では叶えられなかったシチュエーションをイラストで叶える",
+      description: "月の上に乗って、こだわって選んだお気に入りのドレスとタキシード。\nロマンチックなシチュエーションをイラストで叶える。",
     }
   ];
   
   // Voiceデータ
   const voiceData = [
     {
+      id: "A",
       image: voice1,
-      title: "Aさん（30代女性）",
-      description: "結婚式のウェルカムボードをお願いしました。私たちの雰囲気をとても良く捉えていて、当日はゲストの皆さんにも大好評でした。思い出に残る素敵な一枚をありがとうございました！",
-      category: "ウェディングイラスト"
+      category: "Aさま",
+      title: "ウェルカムボード&サンキューカード",
+      description: "なゆさん、素敵なイラストを本当にありがとうございました！\nおかげでとっても可愛い結婚式になりました！\nまた機会があればよろしくお願いします！\nこれからも可愛いイラスト投稿楽しみにしてます！",
+      images: [voice1, voice2]
     },
     {
-      image: voice2,
-      title: "Bさん（20代カップル）",
-      description: "結婚証明書を作っていただきました。シンプルながらも温かみのあるデザインで、一生の宝物になりました。細かい要望にも丁寧に対応していただき感謝しています。",
-      category: "結婚証明書"
-    },
-    {
+      id: "B",
       image: voice3,
-      title: "Cさん（40代男性）",
-      description: "妻への結婚記念日のプレゼントとして依頼しました。想像以上の出来栄えで、妻も大変喜んでくれました。思い出の場所を背景に入れていただいたのが特に良かったです。",
-      category: "アニバーサリーイラスト"
+      category: "Bさま",
+      title: "ウェルカムボード&プロフィールブック",
+      description: "めちゃくちゃ可愛くて\n2人でテンション上がってました！！\n\nドレスの裾が透けててほんとに可愛くてお気に入りです！\n裾のところめちゃくちゃ個人的に好きだったので、\nしっかり再現されててすごく嬉しいです！！\n\n絶対に同じポーズで写真撮りたいと思って、\n介添えの人にずっとお願いしてました！\n\nプロフィールブックにも使わせていただきました！\nいろんな人からかわいい！って言ってもらえて、\n大好評でした！！！\n本当にありがとうございました！！",
+      images: [voice3, voice4, voice5]
     },
     {
-      image: voice4,
-      title: "Dさん（30代女性）",
-      description: "愛犬との思い出のイラストをお願いしました。犬の表情や仕草まで細かく再現していただき感動しました。リビングに飾って毎日眺めています。",
-      category: "ペットイラスト"
-    },
-    {
-      image: voice5,
-      title: "Eさん（20代女性）",
-      description: "両親への贈り物として家族全員のイラストをお願いしました。一人一人の個性が出ていて、両親も涙を流して喜んでくれました。素敵な思い出をありがとうございます。",
-      category: "ファミリーイラスト"
-    },
-    {
+      id: "C",
       image: voice6,
-      title: "Fさん（30代カップル）",
-      description: "サンキューカードを作っていただきました。ゲストの皆さんからも「素敵」「温かみがある」と好評でした。短納期にも関わらず対応いただき本当にありがとうございました。",
-      category: "サンキューカード"
+      category: "Cさま",
+      title: "ウェルカムボード&サンキューシール",
+      description: "丁寧に対応してくださって感謝でいっぱいです！\n息子も入れたイラストを描いていただくのが夢だったので、\nこういった形で描いていただけて本当に嬉しいです！\n\n無事結婚式終びました！\nサンキューシールとウェルカムボードに使わせていただきました！\n友達だけじゃなくてプランナーさんにまで\n「この絵誰ですね！似顔絵？可愛い！」って言って貰えました！\n\nなゆさんの絵可愛すぎて本当に書いていただけて嬉しかったです！",
+      images: [voice6, voice7]
     },
     {
-      image: voice7,
-      title: "Gさん（40代女性）",
-      description: "子供たちへのプレゼントとして家族イラストを依頼しました。子供たちの特徴をよく捉えていて、とても喜んでもらえました。また機会があればお願いしたいです。",
-      category: "ファミリーイラスト"
-    },
-    {
+      id: "D",
       image: voice8,
-      title: "Hさん（20代男性）",
-      description: "彼女へのプロポーズの際に使用するイラストをお願いしました。イメージ通りの素敵な仕上がりで、プロポーズも成功しました！一生の思い出に残る作品をありがとうございます。",
-      category: "カップルイラスト"
+      category: "Dさま",
+      title: "ウェルカムボード",
+      description: "ありがとうございます！\n旦那と2人で絶賛してます！！\n写真と比較してそのまますごすごいです顔は可愛くしてもらって感謝です",
+      images: [voice8]
     }
   ];
   
@@ -435,14 +423,10 @@ const Home: React.FC = () => {
         <h2>About</h2>
         <div className="about-content">
           <div className="about-text">
-            <h3>nny.illustration</h3>
+            <h3>nayu</h3>
             <p>
-              はじめまして。イラストレーターのnayuです。<br />
-              結婚式のウェルカムボードや結婚証明書など、ブライダル関連のイラストを中心に活動しています。
-            </p>
-            <p>
-              お二人の大切な日のお手伝いができることを嬉しく思います。<br />
-              心を込めて制作いたしますので、お気軽にご相談ください。
+              福岡市出身、福岡市在住。<br />
+              イラストレーターとして活動中。<br />
             </p>
             <div className="social-links-home">
               <a href="https://www.instagram.com/nny.illustration/" target="_blank" rel="noopener noreferrer">
@@ -453,9 +437,17 @@ const Home: React.FC = () => {
               </a>
             </div>
             <h3 className="concept-title">Illustration Concept</h3>
+            <p className="concept-subtitle">
+            「いつまでも甘いトキメキを忘れないように…」</p>
             <p>
-              温かみのある手描き風のイラストで、お二人らしさを大切にした作品を制作します。<br />
-              シンプルながらも個性が光る、世界に一つだけの特別なイラストをお届けします。
+イラストになったアナタに、きっと愛着が湧いちゃう "キャラクターチック" なイラストと、
+"オトナカワイイ" を意識した、甘すぎず・シックすぎずなカラーリングで、
+ずっとアナタの側に寄り添い続ける、愛おしいイラストを心を込めてお描きします。
+<br />
+<p className="concept-text">皆さまの「特別な日」だけでなく「何気ない日々」にも"甘い魔法"をかけるように、
+願いを込めて…</p>
+
+
             </p>
             <Link to="/about" className="read-more">Read more</Link>
           </div>
@@ -475,7 +467,7 @@ const Home: React.FC = () => {
               <div 
                 className="carousel-item" 
                 key={index}
-                onClick={() => openWorksModal(work.image, work.title, work.description, work.category)}
+                onClick={() => openWorksModal(work.image, work.title, work.description)}
               >
                 <img src={work.image} alt={work.title} />
               </div>
@@ -489,11 +481,11 @@ const Home: React.FC = () => {
         <p>お客様から頂いたお写真や感謝のお言葉を掲載させていただいています。</p>
         <div className="voice-carousel">
           <Slider {...voiceSliderSettings}>
-            {voiceData.map((voice, index) => (
+            {voiceData.map((voice) => (
               <div 
                 className="carousel-item" 
-                key={index}
-                onClick={() => openVoiceModal(voice.image, voice.title, voice.description, voice.category)}
+                key={voice.id}
+                onClick={() => openVoiceModal(voice.id)}
               >
                 <img src={voice.image} alt={voice.title} />
               </div>
@@ -593,7 +585,6 @@ const Home: React.FC = () => {
         image={worksModalContent.image}
         title={worksModalContent.title}
         description={worksModalContent.description}
-        category={worksModalContent.category}
       />
 
       <VoiceModal
@@ -602,6 +593,7 @@ const Home: React.FC = () => {
         image={voiceModalContent.image}
         title={voiceModalContent.title}
         description={voiceModalContent.description}
+        images={voiceModalContent.images}
         category={voiceModalContent.category}
       />
     </div>

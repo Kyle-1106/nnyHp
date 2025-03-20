@@ -19,7 +19,7 @@
 
 /* ヒーローセクション */
 .hero {
-  height: 80vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: flex-start; /* 上部に配置するために変更 */
@@ -598,6 +598,9 @@
   margin: 0;
   width: 100%;
   text-align: center;
+}
+.order-step h3 {
+  font-size: 2rem;
 }
 
 .step-number {
@@ -1205,4 +1208,135 @@
   margin-bottom: 30px;
   color: #6a8ba6;
   text-align: center;
+}
+
+/* service-preview内のフローステップスタイル */
+.flow-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* flow-stepの基本スタイル */
+.flow-step {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flow-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background-color: #6a8ba6;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-right: 25px;
+  flex-shrink: 0;
+}
+
+.step-details {
+  flex: 1;
+}
+
+.step-details h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #6a8ba6;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.step-details p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* 既存のorder-stepを以下のスタイルに置き換える */
+.service-preview .order-step {
+  margin-top: 80px;
+}
+
+.service-preview .order-step h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #6a8ba6;
+  text-align: center;
+}
+
+/* PC表示の場合の横長レイアウト（992px以上） */
+@media (min-width: 992px) {
+  .service-preview .flow-steps {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  
+  .service-preview .flow-step {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* タブレット表示の場合 */
+@media (max-width: 991px) {
+  .service-preview .flow-steps {
+    flex-direction: column;
+  }
+  
+  .service-preview .flow-step {
+    width: 100%;
+  }
+  
+  .step-details h3 {
+    text-align: left;
+  }
+}
+
+/* モバイル表示の場合 */
+@media (max-width: 768px) {
+  .flow-step {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .step-number {
+    margin-bottom: 15px;
+    margin-right: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  
+  .step-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .step-details p {
+    font-size: 0.95rem;
+    text-align: left;
+  }
 } 

@@ -1,0 +1,343 @@
+/* ウェディングイラストページのスタイル */
+.wedding-illustration-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #333;
+}
+
+/* ヒーローセクション */
+.wedding-hero {
+  text-align: center;
+  margin-bottom: 80px;
+  padding: 60px 20px;
+  background-color: #fcfcf2;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.wedding-hero h1 {
+  font-size: 3rem;
+  color: #6a8ba6;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #6a8ba6;
+  margin-bottom: 30px;
+}
+
+.hero-description {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* 作品例セクション */
+.wedding-samples {
+  margin-bottom: 80px;
+}
+
+.wedding-samples h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #6a8ba6;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+.samples-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sample-item {
+  text-align: center;
+}
+
+.sample-image-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.sample-image-button:hover {
+  transform: translateY(-5px);
+}
+
+.sample-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sample-item p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* 料金セクション */
+.wedding-price {
+  margin-bottom: 80px;
+  padding: 60px 40px;
+  background-color: #fcfcf2;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.wedding-price h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #6a8ba6;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+.price-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.price-item {
+  margin-bottom: 40px;
+}
+
+.price-item h3 {
+  font-size: 1.8rem;
+  color: #6a8ba6;
+  margin-bottom: 5px;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+.price-amount {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.price-description {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.price-detail-item {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.option-list {
+  list-style: none;
+  padding: 0;
+}
+
+.option-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.option-name {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.option-price {
+  font-size: 1.1rem;
+  color: #a02c2c;
+}
+
+.option-description {
+  margin: 5px 0 15px 25px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.sample-link {
+  display: block;
+  color: #6a8ba6;
+  text-decoration: underline;
+  margin-top: 5px;
+  font-size: 1rem;
+  text-align: right;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+/* 注文の流れセクション */
+.wedding-flow {
+  margin-bottom: 80px;
+  padding: 60px 40px;
+  background-color: #fcfcf2;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.wedding-flow h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #6a8ba6;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+.flow-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flow-steps {
+  position: relative;
+}
+
+.flow-steps::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+}
+
+.flow-step {
+  display: flex;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: #6a8ba6;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 20px;
+  z-index: 1;
+  margin-top: 0px;
+  line-height: 1;
+  padding-bottom: 5px;
+}
+
+.step-details {
+  flex: 1;
+}
+
+.step-details h3 {
+  font-size: 1.3rem;
+  color: #6a8ba6;
+  margin-bottom: 10px;
+}
+
+.step-details p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* お問い合わせセクション */
+.wedding-contact {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fcfcf2;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.wedding-contact h2 {
+  font-size: 2.5rem;
+  color: #6a8ba6;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+.wedding-contact p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  color: #6a8ba6;
+  font-size: 1.3rem;
+  text-decoration: none;
+  margin-bottom: 30px;
+  transition: color 0.3s ease;
+}
+
+.instagram-link svg {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.instagram-link:hover {
+  color: #a02c2c;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .wedding-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .samples-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .wedding-price,
+  .wedding-flow,
+  .wedding-contact {
+    padding: 40px 20px;
+  }
+  
+  .wedding-samples h2,
+  .wedding-price h2,
+  .wedding-flow h2,
+  .wedding-contact h2 {
+    font-size: 2rem;
+  }
+  
+  .price-item h3 {
+    font-size: 1.5rem;
+  }
+  
+  .price-amount {
+    font-size: 1.8rem;
+  }
+  
+  .step-details h3 {
+    font-size: 1.2rem;
+  }
+} 

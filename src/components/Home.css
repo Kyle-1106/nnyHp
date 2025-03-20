@@ -1,0 +1,1148 @@
+/* 振り子アニメーション */
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.swing-animation {
+  animation: swing 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* ホームコンテナ */
+.home-container {
+  background-color: #eeeee4;
+}
+
+/* ヒーローセクション */
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 上部に配置するために変更 */
+  padding-top: 120px; /* 上部の余白を増やす */
+  margin-bottom: 0;
+  position: relative;
+  background: linear-gradient(to bottom, 
+    #0a1128 0%, 
+    #1c2541 50%, 
+    #3a506b 80%, 
+    #5b7b9e 95%,
+    #fcfcf2 100%);
+  overflow: hidden;
+}
+
+/* 地平線の効果 */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* 高さをさらに増やす */
+  background: linear-gradient(to top, 
+    /* rgba(252, 252, 242, 0.7) 20%, */
+    /* rgba(252, 252, 242, 0.5) 30%, */
+    /* rgba(255, 200, 124, 0.2) 60%,  */
+    transparent 100%); /* より多くの段階を持つグラデーション */
+  z-index: 1;
+}
+
+/* 星のアニメーション */
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 4s infinite;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes twinkle {
+  0% { opacity: 0; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+/* 月のイラスト */
+.hero-image {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  margin-top: -40px; /* 上に移動するためのマージン */
+}
+
+.hero-image img {
+  max-width: 100%;
+  max-height: 60vh; /* 高さを少し小さくして上に余裕を持たせる */
+}
+
+/* Aboutプレビューセクション */
+.about-preview {
+  max-width: 1200px;
+  margin: 50px auto 80px; /* 上部マージンを正の値に戻して重なりをなくす */
+  padding: 60px 20px 60px; /* 上部パディングを調整 */
+  background-color: #fcfcf2;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03); /* シャドウを薄くして境界を曖昧に */
+  position: relative;
+  z-index: 10;
+}
+
+/* Aboutプレビューの上部装飾を削除 */
+.about-preview::before {
+  content: '';
+  position: absolute;
+  top: -60px; /* より上に配置 */
+  left: 0;
+  width: 100%;
+  height: 120px; /* 高さを増やす */
+  background: linear-gradient(to bottom,
+    rgba(252, 252, 242, 0) 0%,
+    rgba(252, 252, 242, 0.1) 30%,
+    rgba(252, 252, 242, 0.3) 60%,
+    rgba(252, 252, 242, 0.5) 80%,
+    rgba(252, 252, 242, 0.7) 100%); /* より緩やかなグラデーション */
+  border-radius: 100% 100% 0 0 / 120px 120px 0 0; /* より緩やかなカーブ */
+  z-index: -1;
+}
+
+.about-preview h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #6a8ba6;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  position: relative;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #6a8ba6;
+  font-size: 2rem;
+}
+
+/* Illustration Conceptのタイトルに余白を追加 */
+.concept-title {
+  margin-top: 40px !important;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+/* SNSリンクのスタイル */
+.social-links-home {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.social-links-home a {
+  display: inline-flex;
+  align-items: center;
+  color: #6a8ba6;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  font-size: 0.95rem;
+}
+
+.social-links-home a svg {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.social-links-home a:hover {
+  opacity: 0.7;
+}
+
+.about-image {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.about-image img {
+  max-width: 100%;
+  max-height: 400px;
+  margin-bottom: 30px;
+}
+
+/* Readmoreボタン */
+.read-more {
+  display: inline-block;
+  color: #6a8ba6;
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+  position: absolute; /* 絶対位置指定 */
+  bottom: 25px; /* 下からの距離 */
+  right: 200px; /* 右からの距離 */
+}
+
+/* Worksプレビューセクション */
+.works-preview {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 40px 20px 60px;
+  background-color: #fcfcf2;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 5;
+}
+
+.works-preview h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #6a8ba6;
+}
+
+.works-intro {
+  text-align: left; /* 左揃えに変更 */
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Voice プレビューセクション */
+.voice-preview {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  position: relative;
+  background-color: #fcfcf2;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.voice-preview h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #6a8ba6;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+/* Works カルーセル */
+.works-carousel {
+  position: relative;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+.works-carousel .carousel-item {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 500px;
+}
+
+.works-carousel .carousel-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.works-carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+/* Voice カルーセル - Worksと完全に同じスタイル */
+.voice-carousel {
+  position: relative;
+  padding: 0 40px;
+  margin-bottom: 30px;
+}
+
+.voice-carousel .carousel-item {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 500px;
+  width: 400px;
+}
+
+.voice-carousel .carousel-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.voice-carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* アスペクト比を保ちながら領域を埋める */
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+/* スライド間の余白を統一 */
+.works-carousel .slick-slide,
+.voice-carousel .slick-slide {
+  padding: 10px;
+}
+
+.view-more {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  font-size: 1rem;
+  color: #6a8ba6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.view-more:hover {
+  color: #a02c2c;
+}
+
+/* カルーセルスタイル */
+.works-carousel {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 0 40px;
+}
+
+.carousel-item {
+  padding: 0 10px;
+  height: 300px; /* 固定の高さを設定 */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto; /* 幅を自動調整 */
+  height: auto; /* 高さを自動調整 */
+  object-fit: contain; /* 画像のアスペクト比を維持 */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.carousel-item:hover img {
+  transform: scale(1.05);
+}
+
+/* カスタム矢印 */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;  /* 背景色を透明に変更 */
+  border-radius: 0;  /* 丸い縁を削除 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #6a8ba6;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  box-shadow: none;  /* シャドウを削除 */
+}
+
+.custom-arrow:hover {
+  background-color: transparent;  /* ホバー時も背景を透明に */
+  color: #6a8ba6;
+  transform: translateY(-50%) scale(1.1);  /* ホバー時に少し拡大 */
+}
+
+.prev-arrow {
+  left: -5px;  /* 左矢印を少し外側に */
+}
+
+.next-arrow {
+  right: -5px;  /* 右矢印を少し外側に */
+}
+
+/* Slickの矢印をカスタマイズ - 上書き設定 */
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'slick' !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  opacity: .75 !important;
+  color: #6a8ba6 !important;  /* 白から #6a8ba6 に色を変更 */
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Slickのドットカスタマイズ - 上書き設定 */
+.slick-dots {
+  bottom: -50px !important; /* ドットの位置を下に移動 */
+}
+
+.slick-dots li button:before {
+  color: #6a8ba6 !important;
+  opacity: 0.3 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #6a8ba6 !important;
+  opacity: 1 !important;
+}
+
+/* Serviceプレビューセクション */
+.service-preview {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 40px 20px 60px;
+  background-color: #fcfcf2;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 5;
+}
+
+.service-preview h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #6a8ba6;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* メニュー部分 */
+.service-menu {
+  margin-bottom: 20px;
+}
+
+.service-menu h3 {
+  font-size: 2rem;
+  color: #6a8ba6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-list li {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.service-note {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* サービス例部分 */
+.service-example {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.service-image {
+  flex: 1;
+  max-width: 45%;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.service-info {
+  flex: 1;
+  text-align: left;
+  position: relative;
+  padding-bottom: 40px; /* Read moreのための余白 */
+}
+
+.service-info h3 {
+  font-size: 1.8rem;
+  color: #6a8ba6;
+  margin-bottom: 20px;
+}
+
+.service-description {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.service-read-more {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #6a8ba6;
+  text-decoration: underline;
+  font-style: italic;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+/* HOW TO ORDER部分 */
+.service-order {
+  margin-top: 40px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.service-order h3 {
+  font-size: 2.5rem;
+  color: #6a8ba6;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* ステップタイトルのスタイルを明示的に設定 */
+.service-order .step-title {
+  font-size: 1.4rem !important;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #6a8ba6;
+}
+
+.order-steps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 50px;
+  padding: 20px 0;
+}
+
+.order-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0;
+}
+
+.step-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6a8ba6;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.step-image {
+  width: 180px;
+  height: 180px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.step-image img {
+  max-width: 75%;
+  max-height: 75%;
+}
+
+.step-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.step-description {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+.step-arrow {
+  position: absolute;
+  top: 120px;
+  right: -40px;
+  color: #6a8ba6;
+  font-size: 1.3rem;
+  z-index: 2;
+}
+
+/* タブレット・スマホ向けレスポンシブ対応 */
+@media (max-width: 992px) {
+  .order-steps {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 20px;
+  }
+  
+  .order-step {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .step-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .step-arrow {
+    right: -10px;
+    top: 60px;
+  }
+  
+  /* 3つ目のステップの後に矢印を非表示（折り返し時） */
+  .order-step:nth-child(3) .step-arrow {
+    display: none;
+  }
+  
+  /* Aboutセクションのレイアウト調整 */
+  .about-preview {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* 画像を見出しの直後に移動 */
+  .about-image {
+    order: -1; /* 順序を変更して最初に配置 */
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 30px;
+    width: 100%;
+  }
+  
+  .about-image img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .read-more {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 20px;
+    display: block;
+    text-align: right;
+  }
+}
+
+/* モバイル向けレスポンシブ対応 */
+@media (max-width: 768px) {
+  .service-example {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .service-image {
+    max-width: 100%;
+    order: 2;
+  }
+  
+  .service-info {
+    padding-bottom: 30px;
+    order: 1;
+  }
+  
+  .service-read-more {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    display: block;
+    text-align: right;
+    margin-top: 15px;
+  }
+  
+  .order-steps {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .order-step {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 40px;
+  }
+  
+  .step-image {
+    width: 180px;
+    height: 180px;
+  }
+  
+  /* モバイル表示時のステップタイトルも明示的に設定 */
+  .service-order .step-title {
+    font-size: 1.5rem !important;
+    color: #6a8ba6;
+  }
+  
+  .step-description {
+    font-size: 1rem;
+  }
+  
+  .step-arrow {
+    position: static;
+    transform: rotate(90deg);
+    margin: 10px 0;
+    font-size: 1.5rem;
+  }
+  
+  /* すべてのステップの矢印を表示（縦並びの場合） */
+  .order-step:nth-child(3) .step-arrow {
+    display: block;
+  }
+}
+
+/* FAQセクション */
+.faq-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  background-color: #fcfcf2;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #6a8ba6;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+.faq-subtitle {
+  display: block;
+  font-size: 1.8rem;
+  margin-top: 5px;
+  color: #6a8ba6;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 0;
+  position: relative;
+}
+
+.q-mark {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6a8ba6;
+  margin-right: 15px;
+}
+
+.question-text {
+  flex: 1;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.faq-icon {
+  color: #6a8ba6;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  display: flex;
+  padding: 15px 0 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.a-mark {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d0a0a0;
+  margin-right: 15px;
+}
+
+.answer-text {
+  flex: 1;
+  line-height: 1.6;
+  color: #555;
+}
+
+.faq-contact {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.cancel-policy {
+  margin-top: 10px;
+}
+
+.cancel-policy a {
+  color: #6a8ba6;
+  text-decoration: none;
+}
+
+.cancel-policy a:hover {
+  text-decoration: underline;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 576px) {
+  .order-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .step-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .step-title {
+    font-size: 1.1rem;
+  }
+  
+  .step-description {
+    font-size: 0.85rem;
+  }
+  
+  .order-step {
+    margin-bottom: 50px;
+  }
+}
+
+/* さらに小さい画面サイズの調整 */
+@media (max-width: 480px) {
+  .carousel-item {
+    height: 200px; /* より小さい画面での高さをさらに調整 */
+  }
+  
+  .works-carousel,
+  .voice-carousel {
+    padding: 0 20px; /* より小さい画面での余白をさらに調整 */
+  }
+  
+  .custom-arrow {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Worksセクション */
+.works-section {
+  padding: 80px 0;
+  background-color: #f9f9f5;
+}
+
+.works-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #6a8ba6;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.work-item {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  height: 100%;
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.work-image {
+  height: 500px; /* 画像の高さをさらに増やす */
+  overflow: hidden;
+}
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像のアスペクト比を維持しながら領域を埋める */
+  transition: transform 0.5s;
+}
+
+.work-item:hover .work-image img {
+  transform: scale(1.05);
+}
+
+.work-info {
+  padding: 20px;
+}
+
+.work-info h3 {
+  margin-bottom: 10px;
+  color: #6a8ba6;
+}
+
+.work-info p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Voiceセクション */
+.voice-section {
+  padding: 80px 0;
+  background-color: #fcfcf2;
+}
+
+.voice-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #6a8ba6;
+}
+
+.voice-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.voice-item {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.voice-content {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.voice-image {
+  height: 500px; /* 画像の高さをさらに増やす */
+  overflow: hidden;
+}
+
+.voice-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像のアスペクト比を維持しながら領域を埋める */
+  transition: transform 0.5s;
+}
+
+.voice-content:hover .voice-image img {
+  transform: scale(1.05);
+}
+
+.voice-info {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.voice-info h3 {
+  margin-bottom: 10px;
+  color: #6a8ba6;
+}
+
+.voice-info p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.voice-read-more {
+  align-self: flex-start;
+  padding: 8px 16px;
+  background-color: #a5c0d0;
+  color: white;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
+}
+
+.voice-read-more:hover {
+  background-color: #6a8ba6;
+}
+
+/* スライダーのサイズを大きくする */
+.slick-slide {
+  height: auto;
+  padding: 10px;
+}
+
+.slick-slide.slick-active {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  z-index: 10;
+  width: 400px;
+}
+
+/* Voiceセクションのスライダー調整 */
+.voice-slider .slick-track {
+  display: flex;
+  padding: 20px 0;
+}
+
+.voice-slider .slick-slide {
+  height: auto;
+  display: flex;
+}
+
+.voice-slider .slick-slide > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* Worksセクションのスライダー調整 */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* 幅を大きくする */
+  gap: 40px; /* 間隔を広げる */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.work-item {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  height: 100%;
+}
+
+.work-image {
+  height: 500px; /* 画像の高さをさらに増やす */
+  overflow: hidden;
+}
+
+/* タブレット向けレスポンシブ対応 */
+@media (max-width: 992px) and (min-width: 769px) {
+  .order-steps {
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .order-step {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .step-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .step-number {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  
+  .step-title {
+    font-size: 1.2rem;
+  }
+  
+  .step-description {
+    font-size: 0.95rem;
+  }
+} 

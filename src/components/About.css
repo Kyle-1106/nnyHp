@@ -1,0 +1,118 @@
+/* About ページのスタイル */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.about-title {
+  text-align: center;
+  padding: 60px 0 40px;
+  font-size: 3rem;
+  color: #6a8ba6;
+}
+
+.about-section {
+  margin-bottom: 60px;
+}
+
+.about-profile {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.profile-image {
+  flex: 0 0 300px;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+.profile-image img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.profile-text {
+  flex: 1;
+}
+
+.profile-text h2 {
+  margin-bottom: 20px;
+  color: #6a8ba6;
+}
+
+.profile-details {
+  margin-bottom: 30px;
+}
+
+
+.profile-item h3 {
+  color: #6a8ba6;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.profile-item p {
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+
+.profile-detail {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.concept-section {
+  margin-bottom: 60px;
+}
+
+.concept-section h2 {
+  color: #6a8ba6;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.concept-content p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+/* ソーシャルリンクのスタイル */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: block;
+  margin-bottom: 10px;
+  color: #6a8ba6;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #3a506b;
+}
+
+.social-links svg {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .about-profile {
+    flex-direction: column;
+  }
+  
+  .profile-image {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    padding: 40px 0 30px;
+  }
+} 

@@ -1,0 +1,73 @@
+/* 既存のスタイルに追加 */
+
+/* 振り子アニメーション */
+@keyframes swing {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.swing-animation {
+  animation: swing 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* ヒーローセクションの調整 */
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.hero-image {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-image img {
+  max-width: 100%;
+  max-height: 70vh;
+}
+
+/* Aboutセクションのスタイル調整 */
+.about-preview {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.about-preview h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #6a8ba6;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.about-image {
+  flex: 1;
+  text-align: right;
+}
+
+.about-image img {
+  max-width: 100%;
+  max-height: 400px;
+} 

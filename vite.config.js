@@ -20,8 +20,12 @@ export default defineConfig({
     open: true
   },
   build: {
-    outDir: 'build',
-    sourcemap: true
+    outDir: 'dist',
+    sourcemap: true,
+    assetsInlineLimit: 0, // 小さいアセットもインライン化しない
+    rollupOptions: {
+      maxParallelFileOps: 3 // 並列処理数を制限
+    }
   },
   optimizeDeps: {
     esbuildOptions: {

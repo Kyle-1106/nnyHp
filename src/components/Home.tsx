@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import topImage from '../assets/home/top.png';
-import aboutImage from '../assets/home/about.png';
+import aboutImage from '../assets/home/about.webp';
 // イラスト画像のインポート
 import illust1 from '../assets/home/illustrations/illust1.png';
 import illust2 from '../assets/home/illustrations/illust2.png';

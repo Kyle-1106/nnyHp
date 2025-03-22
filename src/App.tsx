@@ -3,14 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import About from './components/About';
-// import Works from './components/Works';
-import Service from './components/WeddingIllustration';
-// import Contact from './components/Contact';
 import WeddingIllustration from './components/WeddingIllustration';
 import MarriageCertificate from './components/MarriageCertificate';
 import CancellationPolicy from './components/CancellationPolicy';
 import NotFound from './components/NotFound';
-
 const App: React.FC = () => {
   return (
     <Router>

@@ -9,6 +9,7 @@ import Service from './components/WeddingIllustration';
 import WeddingIllustration from './components/WeddingIllustration';
 import MarriageCertificate from './components/MarriageCertificate';
 import CancellationPolicy from './components/CancellationPolicy';
+import NotFound from './components/NotFound';
 
 const App: React.FC = () => {
   return (
@@ -25,8 +26,8 @@ const App: React.FC = () => {
           <Route path="cancellation-policy" element={<CancellationPolicy />} />
           {/* 他のルートは実装されていない場合はコメントアウトする */}
           {/* <Route path="/faq" element={<FAQ />} />
-          <Route path="/policy" element={<Policy />} />
-          <Route path="*" element={<NotFound />} /> */}
+          <Route path="/policy" element={<Policy />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </Router>

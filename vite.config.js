@@ -24,8 +24,14 @@ export default defineConfig({
     sourcemap: true,
     assetsInlineLimit: 0, // 小さいアセットもインライン化しない
     rollupOptions: {
-      maxParallelFileOps: 3 // 並列処理数を制限
-    }
+      maxParallelFileOps: 3, // 並列処理数を制限
+      output: {
+        manualChunks: undefined, // チャンクを分割しない
+        assetFileNames: 'assets/[name].[hash].[ext]' // アセットファイル名を明示的に指定
+      }
+    },
+    cssCodeSplit: false, // CSSを分割せず1つのファイルにまとめる
+    minify: 'terser' // より強力なminify
   },
   optimizeDeps: {
     esbuildOptions: {

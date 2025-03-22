@@ -14,7 +14,6 @@ interface VoiceModalProps {
   description: string;
   category: string;
   images: string[];
-  annotation: string;
 }
 
 const VoiceModal: React.FC<VoiceModalProps> = ({ 
@@ -23,8 +22,7 @@ const VoiceModal: React.FC<VoiceModalProps> = ({
   title, 
   description, 
   category,
-  images,
-  annotation
+  images
 }) => {
   if (!isOpen) return null;
 
@@ -71,7 +69,6 @@ const VoiceModal: React.FC<VoiceModalProps> = ({
           <div className="modal-info">
             <span className="modal-category">{category}</span>
             <h3 className="modal-title">{title}</h3>
-            <p>{annotation}</p>
             <div className="modal-description">
               <p>{description}</p>
             </div>

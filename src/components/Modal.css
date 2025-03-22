@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  padding: 7px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -18,7 +18,7 @@
   background-color: #fcfcf2;
   border-radius: 20px;
   max-width: 900px;
-  width: 100%;
+  width: 90%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
@@ -84,29 +84,6 @@
   white-space: pre-line;
 }
 
-/* アノテーションスタイル */
-.modal-annotation {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #f7f7f0;
-  border-radius: 10px;
-  border-left: 3px solid #6a8ba6;
-}
-
-.modal-annotation h4 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #6a8ba6;
-  font-size: 1.1rem;
-}
-
-.modal-annotation p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #666;
-}
-
 /* Voiceモーダル特有のスタイル */
 .voice-modal .modal-image {
   max-width: 300px;
@@ -140,7 +117,7 @@
 
 @media (max-width: 576px) {
   .modal-content {
-    width: 100%;
+    width: 95%;
   }
   
   .modal-body {

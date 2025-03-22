@@ -120,8 +120,7 @@ const Home: React.FC = () => {
     title: '',
     description: '',
     category: '',
-    images: [] as string[],
-    annotation: ''
+    images: [] as string[]
   });
   
   // FAQの開閉を切り替える関数
@@ -157,10 +156,9 @@ const Home: React.FC = () => {
         title: person.title,
         description: person.description,
         images: person.images,
-        category: person.category,
-        annotation: person.annotation
+        category: person.category
       });
-    setVoiceModalOpen(true);
+      setVoiceModalOpen(true);
     }
   };
   
@@ -251,31 +249,31 @@ const Home: React.FC = () => {
     {
       number: "1",
       title: "お問い合わせ",
-      description: "InstagramのDMよりお問い合わせください。ご希望のデザインや内容、納期などをお伝えください。",
+      description: "DMからご連絡",
       image: orderStep1
     },
     {
       number: "2",
       title: "ヒアリング",
-      description: "ご要望について詳しくヒアリングさせていただきます。イメージや好みの色、雰囲気などをお聞かせください。",
+      description: "ご要望確認",
       image: orderStep2
     },
     {
       number: "3",
       title: "お見積り",
-      description: "ご要望に基づいてお見積りをご提示します。ご納得いただけましたら、契約内容の確認と入金をお願いします。",
+      description: "料金・納期案内",
       image: orderStep3
     },
     {
       number: "4",
       title: "制作",
-      description: "お二人のイメージに合わせたイラストを制作します。途中経過をご確認いただくこともできます。",
+      description: "イラスト作成",
       image: orderStep4
     },
     {
       number: "5",
       title: "納品",
-      description: "完成したイラストをデータまたは印刷物でお届けします。ご希望の形式での納品が可能です。",
+      description: "データ/印刷物",
       image: orderStep5
     }
   ];
@@ -341,7 +339,6 @@ const Home: React.FC = () => {
       image: voice1,
       category: "Aさま",
       title: "ウェルカムボード&サンキューカード",
-      annotation: "<お客様の声>(抜粋)",
       description: "なゆさん、素敵なイラストを本当にありがとうございました！\nおかげでとっても可愛い結婚式になりました！\nまた機会があればよろしくお願いします！\nこれからも可愛いイラスト投稿楽しみにしてます！",
       images: [voice1, voice2]
     },
@@ -350,27 +347,24 @@ const Home: React.FC = () => {
       image: voice3,
       category: "Bさま",
       title: "ウェルカムボード&プロフィールブック",
-      annotation: "<お客様の声>(抜粋)",
       description: "めちゃくちゃ可愛くて\n2人でテンション上がってました！！\n\nドレスの裾が透けててほんとに可愛くてお気に入りです！\n裾のところめちゃくちゃ個人的に好きだったので、\nしっかり再現されててすごく嬉しいです！！\n\n絶対に同じポーズで写真撮りたいと思って、\n介添えの人にずっとお願いしてました！\n\nプロフィールブックにも使わせていただきました！\nいろんな人からかわいい！って言ってもらえて、\n大好評でした！！！\n本当にありがとうございました！！",
-      images: [voice3, voice4, voice5],
+      images: [voice3, voice4, voice5]
     },
     {
       id: "C",
       image: voice6,
       category: "Cさま",
       title: "ウェルカムボード&サンキューシール",
-      annotation: "<お客様の声>(抜粋)",
       description: "丁寧に対応してくださって感謝でいっぱいです！\n息子も入れたイラストを描いていただくのが夢だったので、\nこういった形で描いていただけて本当に嬉しいです！\n\n無事結婚式終びました！\nサンキューシールとウェルカムボードに使わせていただきました！\n友達だけじゃなくてプランナーさんにまで\n「この絵誰ですね！似顔絵？可愛い！」って言って貰えました！\n\nなゆさんの絵可愛すぎて本当に書いていただけて嬉しかったです！",
-      images: [voice6, voice7],
+      images: [voice6, voice7]
     },
     {
       id: "D",
       image: voice8,
       category: "Dさま",
       title: "ウェルカムボード",
-      annotation: "<お客様の声>(抜粋)",
       description: "ありがとうございます！\n旦那と2人で絶賛してます！！\n写真と比較してそのまますごすごいです顔は可愛くしてもらって感謝です",
-      images: [voice8],
+      images: [voice8]
     }
   ];
   
@@ -528,19 +522,18 @@ const Home: React.FC = () => {
           </div>
           
           <div className="order-step">
-            <h3>HOW TO ORDER</h3>
-            <div className="flow-content">
-              <div className="flow-steps">
+            <h2>HOW TO ORDER</h2>
+            <div className="order-steps">
               {orderSteps.map((step, index) => (
-                  <div className="flow-step" key={index}>
-                    <div className="step-number">{step.number}</div>
-                    <div className="step-details">
-                      <h3>{step.title}</h3>
-                      <p>{step.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                <OrderStep
+                  key={index}
+                  number={step.number}
+                  title={step.title}
+                  description={step.description}
+                  image={step.image}
+                  isLast={index === orderSteps.length - 1}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -588,7 +581,6 @@ const Home: React.FC = () => {
         description={voiceModalContent.description}
         images={voiceModalContent.images}
         category={voiceModalContent.category}
-        annotation={voiceModalContent.annotation}
       />
     </div>
   );

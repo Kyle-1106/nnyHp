@@ -7,7 +7,10 @@ import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 const About: React.FC = () => {
   // コンポーネントがマウントされたときに画面の一番上にスクロール
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: 'instant'
+    });
   }, []);
 
   return (
@@ -19,7 +22,7 @@ const About: React.FC = () => {
             <img src={aboutImage} alt="イラストレーターの写真" />
           </div>
           <div className="profile-text">
-            <h2>nny.illustration</h2>
+            <h2>nayu</h2>
             <div className="profile-details">
               <div className="profile-item">
                 <h3>▶ 誕生日</h3>

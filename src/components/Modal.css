@@ -1,4 +1,4 @@
-/* モーダルスタイル */
+/* モーダルスタイル
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -106,7 +106,7 @@
 }
 
 /* こだわりポイントのスタイル */
-.highlight-points {
+/* .highlight-points {
   background-color: #fcfcf2;
   border-radius: 15px;
   padding: 20px;
@@ -217,9 +217,9 @@
   background-color: #6a8ba6;
   color: white;
 }
-
+/* 
 /* レスポンシブ対応 */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .modal-content {
     padding: 20px;
     max-height: 85vh;
@@ -234,8 +234,8 @@
   .modal-image-container {
     max-height: none;
     width: 100%;
-  }
-
+  } */
+/* 
   .modal-info {
     padding: 10px;
     width: 100%;
@@ -260,10 +260,10 @@
   .modal-description {
     font-size: 1rem;
   }
-}
+
 
 /* Voiceモーダル特有のスタイル */
-.voice-modal .modal-image {
+/* .voice-modal .modal-image {
   max-width: 300px;
   margin: 0 auto 20px;
 }
@@ -273,10 +273,10 @@
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
+} */
 
 /* レスポンシブデザイン */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .modal-body {
     flex-direction: row;
     align-items: flex-start;
@@ -291,9 +291,9 @@
   .modal-info {
     flex: 1;
   }
-}
+} */
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .modal-content {
     width: 95%;
   }
@@ -311,4 +311,4 @@
     right: 10px;
     font-size: 1.2rem;
   }
-} 
+}   */

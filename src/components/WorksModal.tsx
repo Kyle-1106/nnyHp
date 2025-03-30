@@ -9,6 +9,7 @@ interface WorksModalProps {
   image: string;
   title: string;
   description: string;
+  highlightPoints?: string[];
 }
 
 const WorksModal: React.FC<WorksModalProps> = ({ 
@@ -16,7 +17,8 @@ const WorksModal: React.FC<WorksModalProps> = ({
   onClose, 
   image, 
   title, 
-  description
+  description,
+  highlightPoints = []
 }) => {
   if (!isOpen) return null;
 
@@ -42,22 +44,22 @@ const WorksModal: React.FC<WorksModalProps> = ({
           <div className="modal-info">
             <div className="modal-info-content">
               <h3 className="modal-title">{title}</h3>
-              <div className="highlight-points">
-                <div className="highlight-points-header">
-                  <FontAwesomeIcon icon={faStar} className="star-icon" />
-                  <span>こだわりポイント</span>
-                </div>
-                <div className="highlight-points-content">
-                  <div className="highlight-point">
-                    <span className="point-marker"></span>
-                    優しい色合いと柔らかな雰囲気
+              {highlightPoints.length > 0 && (
+                <div className="highlight-points">
+                  <div className="highlight-points-header">
+                    <FontAwesomeIcon icon={faStar} className="star-icon" />
+                    <span>こだわりポイント</span>
                   </div>
-                  <div className="highlight-point">
-                    <span className="point-marker"></span>
-                    細部までこだわった装飾
+                  <div className="highlight-points-content">
+                    {highlightPoints.map((point, index) => (
+                      <div key={index} className="highlight-point">
+                        <span className="point-marker"></span>
+                        {point}
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </div>
+              )}
               <div className="modal-description-container">
                 <p className="modal-description">{description}</p>
               </div>

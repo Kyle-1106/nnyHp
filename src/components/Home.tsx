@@ -112,7 +112,7 @@ const Home: React.FC = () => {
     image: '',
     title: '',
     description: '',
-
+    highlightPoints: [] as string[]
   });
   
   // Voiceモーダルの状態管理
@@ -135,10 +135,9 @@ const Home: React.FC = () => {
   };
   
   // Worksモーダルを開く関数
-  const openWorksModal = (image: string, title: string, description: string
-  ) => {
+  const openWorksModal = (image: string, title: string, description: string, highlightPoints: string[]) => {
     console.log("モーダルを開きます:", image, title, description);
-    setWorksModalContent({ image, title, description});
+    setWorksModalContent({ image, title, description, highlightPoints });
     setWorksModalOpen(true);
   };
   
@@ -308,31 +307,61 @@ const Home: React.FC = () => {
       image: illust1,
       title: "ブラックスタイルもカワイく！",
       description: "• ブラックスタイルもキャラクターチックなカワイイイラストに\n\n• サングラスの下も表情もしっかり描き込んでいるので、サングラスから透けて見えるおふたりの目がキュート",
+      highlightPoints: [
+        "ブラックスタイルをキャラクターチックに",
+        "サングラスから透ける表情の細部まで表現",
+        "カジュアルな雰囲気を活かしたデザイン"
+      ]
     },
     {
       image: illust2,
       title: "こだわりの前撮り衣装を思い出に残す",
       description: "• 前撮りで着たポップな衣装をイラストに残しました。色味もこだわって忠実に再現。\n\n• 背景の色味は落ち着いた色味で、オシャレ感を演出",
+      highlightPoints: [
+        "前撮り衣装の色味を忠実に再現",
+        "ポップな雰囲気を活かしたデザイン",
+        "落ち着いた背景色でオシャレ感を演出"
+      ]
     },
     {
       image: illust3,
       title: "おふたりの趣味やお気に入りのアイテムを取り入れて...",
       description: "• フーケは前撮りで実際に持っていた物そっくりに\n\n• おふたりが野球ファンとの事で、新郎さまの左手にはグロープを\n\n• 結婚式の日取りに合わせた春らしさとフーケの色味\n\nに合わせた、オレンジとピンクの淡いチェック柄",
+      highlightPoints: [
+        "お気に入りのフーケを忠実に再現",
+        "野球ファンらしさをグローブで表現",
+        "春らしい色味とチェック柄で季節感を演出"
+      ]
     },
     {
       image: illust4,
       title: "愛するペットとのイラストもお任せください",
       description: "• お写真を元に少しポーズを変えて、キャラクター感のあるイラストに\n\n• 写真撮影で少し緊張ぎみのワンちゃんの表情も忠実に再現\n\n• ドレスのレース刺繍も丁寧に描き込み",
+      highlightPoints: [
+        "ワンちゃんの表情をキャラクター感たっぷりに",
+        "ドレスのレース刺繍を丁寧に表現",
+        "自然なポージングで愛らしさを演出"
+      ]
     },
     {
       image: illust5,
       title: "思い出の場所と思い入れのあるドレス…",
       description: "• 前撮りのロケーションを背景に。おふたりが際立つ色味に調整しました。\n\n• お母様の手作りドレスの思い出もイラストに閉じ込めるように、レース刺繍も丁寧に描き込み",
+      highlightPoints: [
+        "思い出のロケーションを背景に",
+        "手作りドレスのレース刺繍を丁寧に表現",
+        "おふたりが際立つ色味に調整"
+      ]
     },
     {
       image: illust6,
       title: "お写真では叶えられなかったシチュエーションをイラストで叶える",
       description: "月の上に乗って、こだわって選んだお気に入りのドレスとタキシード。\nロマンチックなシチュエーションをイラストで叶える。",
+      highlightPoints: [
+        "月の上でのロマンチックなシチュエーション",
+        "お気に入りの衣装を活かしたデザイン",
+        "幻想的な雰囲気を演出"
+      ]
     }
   ];
   
@@ -382,7 +411,7 @@ const Home: React.FC = () => {
       // アニメーションで下ろす（少し高い位置に）
       setTimeout(() => {
         moon.style.transition = 'transform 1.5s ease-out';
-        moon.style.transform = 'translateY(-40px)'; // 上に配置
+        moon.style.transform = 'translateY(-10px)'; // 上に配置
       }, 500);
 
       // 星を表示
@@ -459,7 +488,7 @@ const Home: React.FC = () => {
               <div 
                 className="carousel-item" 
                 key={index}
-                onClick={() => openWorksModal(work.image, work.title, work.description)}
+                onClick={() => openWorksModal(work.image, work.title, work.description, work.highlightPoints)}
               >
                 <img src={work.image} alt={work.title} />
               </div>
@@ -587,6 +616,7 @@ const Home: React.FC = () => {
         image={worksModalContent.image}
         title={worksModalContent.title}
         description={worksModalContent.description}
+        highlightPoints={worksModalContent.highlightPoints}
       />
 
       <VoiceModal

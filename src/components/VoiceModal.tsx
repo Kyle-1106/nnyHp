@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
-import './Modal.css';
+import './VoiceModal.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -49,11 +49,11 @@ const VoiceModal: React.FC<VoiceModalProps> = ({
   return (
     <div className="modal-backdrop" onClick={handleBackdropClick}>
       <div className="modal-content voice-modal">
-        <button className="modal-close" onClick={onClose}>
-          <FontAwesomeIcon icon={faTimes} />
-        </button>
         <div className="modal-body">
           <div className="modal-image-container">
+            <button className="modal-close" onClick={onClose} style={{ zIndex: 1000 }}>
+              <FontAwesomeIcon icon={faTimes} />
+            </button>
             <div className="modal-image">
               {images.length > 1 ? (
                 <Slider {...carouselSettings}>

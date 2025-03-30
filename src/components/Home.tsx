@@ -100,6 +100,7 @@ const OrderStep: React.FC<OrderStepProps> = ({ number, title, description, image
 const Home: React.FC = () => {
   const moonRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
+  const [starsVisible, setStarsVisible] = useState(false);
   
   // FAQの状態管理
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -183,25 +184,16 @@ const Home: React.FC = () => {
       const size = Math.random() * 3.5 + 0.5;
       const left = Math.random() * heroWidth;
       const top = Math.random() * heroHeight * 0.8; // 上部80%に配置
-      // アニメーションの遅延をより分散
-      const delay =0;
-      // アニメーションの持続時間もバリエーション豊かに
-      const duration = Math.random() * 3 + 2;
-      // ランダムで輝く強さも変える
-      const opacity = 0.2 + Math.random() * 0.4;
       
       stars.push(
         <div
           key={`star-${i}`}
-          className="star"
+          className={`star ${starsVisible ? 'visible' : ''}`}
           style={{
             width: `${size}px`,
             height: `${size}px`,
             left: `${left}px`,
-            top: `${top}px`,
-            animationDelay: `${delay}s`,
-            animationDuration: `${duration}s`,
-            opacity: opacity
+            top: `${top}px`
           }}
         />
       );
@@ -380,6 +372,11 @@ const Home: React.FC = () => {
         moon.style.transition = 'transform 1.5s ease-out';
         moon.style.transform = 'translateY(-40px)'; // 上に配置
       }, 500);
+
+      // 星を表示
+      setTimeout(() => {
+        setStarsVisible(true);
+      }, 1000);
     }
     
     // モーダルの状態をログに出力（デバッグ用）

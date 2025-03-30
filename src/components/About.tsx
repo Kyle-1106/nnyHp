@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 const About: React.FC = () => {
-  // コンポーネントがマウントされたときにスクロール位置をトップにリセット
+  // コンポーネントがマウントされたときに画面の一番上にスクロール
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

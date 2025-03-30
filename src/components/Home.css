@@ -52,9 +52,9 @@
 
 /* 星のアニメーション */
 @keyframes twinkle {
-  0% { opacity: 0.2; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.2; }
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 .star {
@@ -66,20 +66,49 @@
 }
 
 .star.visible {
-  opacity: 0.2;
+  opacity: 0;
 }
 
 /* 星のアニメーション遅延を個別に設定 */
 .star:nth-child(3n) {
   animation-delay: 0.3s;
+  animation-duration: 2.5s;
 }
 
 .star:nth-child(3n+1) {
-  animation-delay: 0.6s;
+  animation-delay: 1.2s;
+  animation-duration: 3s;
 }
 
 .star:nth-child(3n+2) {
-  animation-delay: 0.9s;
+  animation-delay: 2.1s;
+  animation-duration: 2.8s;
+}
+
+/* 追加の星のアニメーション遅延 */
+.star:nth-child(5n) {
+  animation-delay: 0.8s;
+  animation-duration: 2.7s;
+}
+
+.star:nth-child(5n+1) {
+  animation-delay: 1.9s;
+  animation-duration: 2.4s;
+}
+
+.star:nth-child(5n+2) {
+  animation-delay: 2.5s;
+  animation-duration: 2.9s;
+}
+
+.star:nth-child(5n+3) {
+  animation-delay: 1.5s;
+  animation-duration: 2.6s;
+}
+
+.star:nth-child(5n+4) {
+  animation-delay: 2.8s;
+  animation-duration: 2.3s;
 }
 
 /* 月のイラスト */

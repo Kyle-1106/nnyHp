@@ -4,7 +4,10 @@ import './CancellationPolicy.css';
 const CancellationPolicy: React.FC = () => {
   // ページ読み込み時に上部にスクロール
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: 'instant'
+    });
   }, []);
 
   return (

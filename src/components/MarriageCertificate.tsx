@@ -32,7 +32,10 @@ const MarriageCertificate: React.FC = () => {
 
     // コンポーネントがマウントされたときに画面の一番上にスクロール
     useEffect(() => {
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+      });
     }, []);
 
   return (

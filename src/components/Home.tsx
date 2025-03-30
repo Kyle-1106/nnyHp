@@ -100,6 +100,7 @@ const OrderStep: React.FC<OrderStepProps> = ({ number, title, description, image
 const Home: React.FC = () => {
   const moonRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [starsVisible, setStarsVisible] = useState(false);
   
   // FAQの状態管理
@@ -169,6 +170,11 @@ const Home: React.FC = () => {
     setVoiceModalOpen(false);
   };
   
+  // コンポーネントがマウントされたときに画面の一番上にスクロール
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   // 星を生成する関数
   const generateStars = () => {
     const stars = [];
@@ -179,7 +185,7 @@ const Home: React.FC = () => {
     const heroHeight = hero.offsetHeight;
     
     // 通常の星
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i <35; i++) {
       // 星のサイズをよりバリエーション豊かに
       const size = Math.random() * 3.5 + 0.5;
       const left = Math.random() * heroWidth;

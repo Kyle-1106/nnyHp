@@ -51,6 +51,7 @@ const Layout: React.FC = () => {
               <li><a onClick={() => scrollToSection('works-section')}>Works</a></li>
               <li><a onClick={() => scrollToSection('service-section')}>Service</a></li>
               <li><a onClick={() => scrollToSection('faq-section')}>FAQ</a></li>
+              <li><Link to="/policy" onClick={() => setIsMenuOpen(false)}>Policy</Link></li>
             </ul>
             <div className="social-links">
               <a href="https://www.instagram.com/nny.illustration/" target="_blank" rel="noopener noreferrer">
@@ -81,7 +82,7 @@ const Layout: React.FC = () => {
               <FontAwesomeIcon icon={faTiktok} /> TikTok: @nny.illustration
             </a>
           </div>
-          <p className="copyright">&copy; 2024 nny.illustration All Rights Reserved.</p>
+          <p className="copyright">&copy; 2025 nny.illustration All Rights Reserved.</p>
         </div>
       </footer>
     </div>

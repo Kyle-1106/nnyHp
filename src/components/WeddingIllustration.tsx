@@ -25,6 +25,14 @@ const WeddingIllustration: React.FC = () => {
     description: ''
   });
 
+  // コンポーネントがマウントされたときに画面の一番上にスクロール
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'instant'
+    });
+  }, []);
+
   // モーダルを開く関数
   const openModal = (title: string, image: string, description: string = '') => {
     setModalContent({ title, image, description });
@@ -35,11 +43,6 @@ const WeddingIllustration: React.FC = () => {
   const closeModal = () => {
     setModalOpen(false);
   };
-
-  // コンポーネントがマウントされたときに画面の一番上にスクロール
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="wedding-illustration-container">

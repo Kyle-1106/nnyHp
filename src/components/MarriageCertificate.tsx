@@ -50,8 +50,8 @@ const MarriageCertificate: React.FC = () => {
           ・プロポーズの日<br />
           ・入籍日<br />
 
-          などの、大切な日をお入れする事で、その後お家でずっと大切な記念日を忘れないためのアドベントカレンダーにもなります★<br />
-          もちろん真ん中にはおふたりのイラストをお描きします♥ ♥<br />
+          などの、大切な日をお入れする事で、その後お家でずっと大切な記念日を忘れないためのアドベントカレンダーにもなります<br />
+          もちろん真ん中にはおふたりのイラストをお描きします<br />
           大切な日の思い出として、また特別なインテリアとしてもお楽しみいただけます。
           </p>
         </div>
@@ -62,6 +62,7 @@ const MarriageCertificate: React.FC = () => {
         <h2>料金</h2>
         <div className="price-content">
           <div className="price-item">
+            <h3>データ納品</h3>
             <p className="price-amount">¥5,000~</p>
             <div className="price-description">
               <p>基本料金に含まれるもの：</p>
@@ -71,7 +72,6 @@ const MarriageCertificate: React.FC = () => {
 
               <div className="option-section">
                 <h3 className="option-title">①おふたりのイラスト</h3>
-                ここに追加説明を書く
                 <div className="option-description">
                   オプション：
                   <ul>
@@ -83,16 +83,13 @@ const MarriageCertificate: React.FC = () => {
                 </div>
 
                 <h3 className="option-title">②おふたりの立っている場所と道のり部分</h3>
-                ここに画像を入れる
                 <div className="option-description">
                   ゲストの人数（ロウソクの数）に合わせて道幅の調整と、おふたりのイラストのシルエットに合わせて、立っている場所の形の調節も行います！
-                  
-                  ここに画像を入れる
                 </div>
 
                 <h3 className="option-title">③おふたりのお名前と日付入れ</h3>
                 <div className="option-description">
-                  ここに画像、追加説明を書く
+                  おふたりのお名前と、大切な日付を入れることができます。
                 </div>
               </div>
 
@@ -136,8 +133,27 @@ const MarriageCertificate: React.FC = () => {
                 <p>ゲストの人数が0〜20名の場合<br/>
                 基本料金 ¥5,000(オプションなし) ＋ キャンドル料金 ¥1,500 ＝ <strong>¥6,500</strong></p>
               </div>
+            </div>
+          </div>
 
-              <p className="price-note">※こちらはデータ納品でのお値段です。</p>
+          <div className="price-item">
+            <h3>現物納品</h3>
+            <p className="price-amount">¥13,000~</p>
+            <div className="price-description">
+              <p>基本料金に含まれるもの：</p>
+              <p>①データ納品の全内容</p>
+              <p>②キャンバス印刷</p>
+              <p className="price-note">※キャンバスサイズはA3,A4のどちらかをお選びいただきます。</p>
+              <p>③送料</p>
+              
+
+              <div className="price-example">
+                <p>料金例：</p>
+                <p>基本料金(オプションなし)+A3サイズ+関東在住の方<br/></p>
+                <strong>¥16,000</strong>
+              </div>
+
+              <p className="price-note">※現物納品の場合、お住まいの地域によって送料が追加される場合があります。</p>
             </div>
           </div>
         </div>

@@ -42,134 +42,102 @@ const MarriageCertificate: React.FC = () => {
         <p className="subtitle">結婚証明書</p>
         <div className="hero-description">
           <p>
-            お二人の誓いを形に残す、世界に一つだけの結婚証明書をお作りします。<br />
-            大切な日の思い出として、また特別なインテリアとしてもお楽しみいただけます。
+          今まで新郎新婦のおふたりが歩んだ来た道のりを、明るく暖かく照らしてくれたゲストの皆さまにロウソクに火を灯していただきます。<br />
+          指でのスタンプ、筆でのペイント、どちらでも素敵に仕上がるデザインです。<br />
+          道のりには、<br />
+          ・おふたりの誕生日<br />
+          ・おふたりがお付き合いを始めた日<br />
+          ・プロポーズの日<br />
+          ・入籍日<br />
+
+          などの、大切な日をお入れする事で、その後お家でずっと大切な記念日を忘れないためのアドベントカレンダーにもなります★<br />
+          もちろん真ん中にはおふたりのイラストをお描きします♥ ♥<br />
+          大切な日の思い出として、また特別なインテリアとしてもお楽しみいただけます。
           </p>
         </div>
       </section>
 
-      <section className="certificate-features">
-        <h2>結婚証明書の特徴</h2>
-        <div className="features-grid">
-          <div className="feature-item">
-            <h3>世界に一つだけのデザイン</h3>
-            <p>お二人の好みやウェディングテーマに合わせたオリジナルデザインで、世界に一つだけの結婚証明書をお作りします。</p>
-          </div>
-          <div className="feature-item">
-            <h3>記念日の思い出に</h3>
-            <p>大切な結婚の日を形に残すことで、いつまでも特別な日の思い出を振り返ることができます。</p>
-          </div>
-          <div className="feature-item">
-            <h3>インテリアとしても</h3>
-            <p>美しくデザインされた結婚証明書は、お部屋に飾るインテリアとしても素敵です。</p>
-          </div>
-          <div className="feature-item">
-            <h3>贈り物としても</h3>
-            <p>大切な方へのウェディングギフトとしても喜ばれます。</p>
-          </div>
-        </div>
-      </section>
-
-
-      <section className="certificate-samples">
-        <h2>作品例</h2>
-        <div className="samples-grid">
-          <div className="sample-item">
-            <button 
-              className="sample-image-button" 
-              onClick={() => openModal(
-                "結婚証明書サンプル1", 
-                // certificateSample1, 
-                "シンプルで上品なデザインの結婚証明書です。お二人のお名前と挙式日を美しく記載します。"
-              )}
-            >
-              {/* <img src={certificateSample1} alt="結婚証明書サンプル1" /> */}
-            </button>
-            <p>シンプルデザイン</p>
-          </div>
-          <div className="sample-item">
-            <button 
-              className="sample-image-button" 
-              onClick={() => openModal(
-                "結婚証明書サンプル2", 
-                // certificateSample2, 
-                "花や装飾を取り入れた華やかなデザインの結婚証明書です。お二人の雰囲気に合わせてカスタマイズできます。"
-              )}
-            >
-              {/* <img src={certificateSample2} alt="結婚証明書サンプル2" /> */}
-            </button>
-            <p>フローラルデザイン</p>
-          </div>
-        </div>
-      </section>
 
       <section className="certificate-price">
         <h2>料金</h2>
         <div className="price-content">
-          <div className="price-details">
-            <div className="price-item">
-              <h3>基本料金</h3>
-              <p className="price-amount">¥6,500〜</p>
-              <div className="price-description">
-                <p>お二人のお名前、挙式日、会場名などを美しくレイアウトした結婚証明書です。</p>
-                <p className="price-detail-item">サイズ…A4またはA3</p>
-                <p className="price-detail-item">納品方法…データ納品または印刷物</p>
-                <p className="price-detail-item">納期…約3週間</p>
-              </div>
-            </div>
+          <div className="price-item">
+            <p className="price-amount">¥5,000~</p>
+            <div className="price-description">
+              <p>基本料金に含まれるもの：</p>
+              <p>①おふたりのイラスト</p>
+              <p>②おふたりの立っている場所と道のり部分</p>
+              <p>③おふたりのお名前と日付入れ</p>
 
-            <div className="price-item">
-              <h3>オプション</h3>
-              <ul className="option-list">
-                <li>
-                  <span className="option-name">①カスタムデザイン</span>
-                  <span className="option-price">+¥3,000〜</span>
-                </li>
-                <p className="option-description">
-                  お二人のイメージやウェディングテーマに合わせたオリジナルデザインをご提案します。
-                  <button 
-                    className="sample-link" 
-                    onClick={() => openModal(
-                      "カスタムデザインサンプル", 
-                      // customDesignSample, 
-                      "お二人だけのオリジナルデザインで特別な証明書を作成します。"
-                    )}
-                  >
-                    Sample
-                  </button>
-                </p>
-                <li>
-                  <span className="option-name">②高級紙印刷</span>
-                  <span className="option-price">+¥2,000</span>
-                </li>
-                <p className="option-description">
-                  上質な和紙や特殊紙に印刷することで、より高級感のある仕上がりになります。
-                </p>
-                <li>
-                  <span className="option-name">③額装</span>
-                  <span className="option-price">+¥5,000〜</span>
-                </li>
-                <p className="option-description">
-                  美しい額に入れてお届けします。木製フレームやアクリルフレームなど、様々なタイプをご用意しています。
-                  <button 
-                    className="sample-link" 
-                    onClick={() => openModal(
-                      "額装サンプル", 
-                      // frameSample, 
-                      "高級感のある額装で、そのまま飾ることができます。"
-                    )}
-                  >
-                    Sample
-                  </button>
-                </p>
-                <li>
-                  <span className="option-name">④お急ぎ対応</span>
-                  <span className="option-price">+¥3,000</span>
-                </li>
-                <p className="option-description">
-                  通常3週間の納期を、10日程度に短縮します。（状況により対応できない場合もございます）
-                </p>
-              </ul>
+              <div className="option-section">
+                <h3 className="option-title">①おふたりのイラスト</h3>
+                ここに追加説明を書く
+                <div className="option-description">
+                  オプション：
+                  <ul>
+                    <li>・人物(ペット)の追加 <span className="option-price">¥1,000/1匹</span></li>
+                    <li>・写真にないアイテムの追加 <span className="option-price">¥500/1つ</span></li>
+                    <li>・和装 <span className="option-price">¥500</span></li>
+                    <li>・ドレスのレースや和柄の細かい柄の描き込み <span className="option-price">¥1,000</span></li>
+                  </ul>
+                </div>
+
+                <h3 className="option-title">②おふたりの立っている場所と道のり部分</h3>
+                ここに画像を入れる
+                <div className="option-description">
+                  ゲストの人数（ロウソクの数）に合わせて道幅の調整と、おふたりのイラストのシルエットに合わせて、立っている場所の形の調節も行います！
+                  
+                  ここに画像を入れる
+                </div>
+
+                <h3 className="option-title">③おふたりのお名前と日付入れ</h3>
+                <div className="option-description">
+                  ここに画像、追加説明を書く
+                </div>
+              </div>
+
+              <div className="price-detail-item">
+                <h4>キャンドル料金</h4>
+                <p>基本料金に加えて、ゲストの人数に応じて以下の料金が加算されます：</p>
+                <ul className="option-list">
+                  <li>
+                    <span className="option-name">0〜20名</span>
+                    <span className="option-price">¥1,500</span>
+                  </li>
+                  <li>
+                    <span className="option-name">21〜30名</span>
+                    <span className="option-price">¥2,000</span>
+                  </li>
+                  <li>
+                    <span className="option-name">31〜40名</span>
+                    <span className="option-price">¥2,500</span>
+                  </li>
+                  <li>
+                    <span className="option-name">41〜50名</span>
+                    <span className="option-price">¥3,000</span>
+                  </li>
+                  <li>
+                    <span className="option-name">51〜60名</span>
+                    <span className="option-price">¥3,500</span>
+                  </li>
+                  <li>
+                    <span className="option-name">61〜70名</span>
+                    <span className="option-price">¥4,000</span>
+                  </li>
+                  <li>
+                    <span className="option-name">71〜80名</span>
+                    <span className="option-price">¥4,500</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="price-example">
+                <p>料金例：</p>
+                <p>ゲストの人数が0〜20名の場合<br/>
+                基本料金 ¥5,000(オプションなし) ＋ キャンドル料金 ¥1,500 ＝ <strong>¥6,500</strong></p>
+              </div>
+
+              <p className="price-note">※こちらはデータ納品でのお値段です。</p>
             </div>
           </div>
         </div>

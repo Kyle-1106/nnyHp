@@ -27,6 +27,7 @@
   font-size: 1.2rem;
   color: #6a8ba6;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .hero-description {
@@ -34,6 +35,8 @@
   margin: 0 auto;
   line-height: 1.8;
   font-size: 1.1rem;
+  text-align: left;
+  padding: 0 20px;
 }
 
 /* 作品例セクション */
@@ -131,22 +134,17 @@
   line-height: 1.6;
 }
 
-.price-detail-item {
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #333;
-}
-
 .option-list {
   list-style: none;
   padding: 0;
+  margin: 15px 0;
 }
 
 .option-list li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
@@ -158,30 +156,76 @@
 .option-price {
   font-size: 1.1rem;
   color: #a02c2c;
+  margin-left: 20px;
 }
 
 .option-description {
-  margin: 5px 0 15px 25px;
+  margin: 5px 0 20px 20px;
   font-size: 0.9rem;
   color: #555;
   line-height: 1.5;
 }
 
-.sample-link {
-  display: block;
-  color: #6a8ba6;
-  text-decoration: underline;
-  margin-top: 5px;
-  font-size: 1rem;
-  text-align: right;
-  background: none;
-  border: none;
-  cursor: pointer;
+.option-description ul {
+  list-style: none;
   padding: 0;
-  font-family: inherit;
+  margin: 10px 0;
 }
 
+.option-description ul li {
+  margin: 5px 0;
+  font-weight: normal;
+}
 
+.option-section {
+  margin: 30px 0;
+}
+
+.option-title {
+  font-size: 1.3rem;
+  color: #6a8ba6;
+  margin: 25px 0 15px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.option-description {
+  margin: 10px 0 25px;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.option-description ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.option-description ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  color: #333;
+}
+
+.option-price {
+  color: #a02c2c;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.price-detail-item {
+  padding-top: 20px;
+}
+
+.price-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 10px 0;
+  font-style: italic;
+}
 
 /* 注文の流れセクション */
 .certificate-flow {
@@ -386,5 +430,30 @@
   
   .step-details h3 {
     font-size: 1.2rem;
+  }
+
+  .option-name,
+  .option-price {
+    font-size: 1rem;
+  }
+
+  .option-description,
+  .price-example p {
+    font-size: 0.9rem;
+  }
+
+  .price-example {
+    padding: 15px;
+  }
+
+  .option-title {
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+  }
+
+  .option-description {
+    font-size: 0.9rem;
+    margin: 8px 0 20px;
+    padding-left: 15px;
   }
 } 

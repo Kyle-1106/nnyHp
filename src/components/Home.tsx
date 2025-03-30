@@ -82,11 +82,11 @@ interface OrderStepProps {
 
 const OrderStep: React.FC<OrderStepProps> = ({ number, title, description, image, isLast = false }) => {
   return (
-    <div className="order-step">
-      <div className="step-content">
-        <div className="step-number">{number}</div>
-        <h3 className="step-title">{title}</h3>
-        <p className="step-description">{description}</p>
+    <div className="flow-step">
+      <div className="step-number">{number}</div>
+      <div className="step-details">
+        <h3>{title}</h3>
+        <p>{description}</p>
       </div>
       {!isLast && (
         <div className="step-arrow">
@@ -178,13 +178,13 @@ const Home: React.FC = () => {
     const heroHeight = hero.offsetHeight;
     
     // 通常の星
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 12; i++) {
       // 星のサイズをよりバリエーション豊かに
       const size = Math.random() * 3.5 + 0.5;
       const left = Math.random() * heroWidth;
       const top = Math.random() * heroHeight * 0.8; // 上部80%に配置
       // アニメーションの遅延をより分散
-      const delay = Math.random() * 5;
+      const delay =0;
       // アニメーションの持続時間もバリエーション豊かに
       const duration = Math.random() * 3 + 2;
       // ランダムで輝く強さも変える
@@ -249,31 +249,31 @@ const Home: React.FC = () => {
     {
       number: "1",
       title: "お問い合わせ",
-      description: "DMからご連絡",
+      description: "InstagramのDMよりお問い合わせください。ご希望のデザインや内容、納期などをお伝えください。",
       image: orderStep1
     },
     {
       number: "2",
-      title: "ヒアリング",
-      description: "ご要望確認",
+      title: "お見積り・ご契約",
+      description: "ご要望に基づいてお見積りをご提示します。ご納得いただけましたら、契約内容の確認と入金をお願いします。",
       image: orderStep2
     },
     {
       number: "3",
-      title: "お見積り",
-      description: "料金・納期案内",
+      title: "デザイン案作成",
+      description: "お二人のイメージに合わせたデザイン案を作成し、ご確認いただきます。",
       image: orderStep3
     },
     {
       number: "4",
-      title: "制作",
-      description: "イラスト作成",
+      title: "修正・確定",
+      description: "デザイン案に対するご要望があれば修正し、最終デザインを確定します。",
       image: orderStep4
     },
     {
       number: "5",
       title: "納品",
-      description: "データ/印刷物",
+      description: "完成したイラストをデータまたは印刷物でお届けします。",
       image: orderStep5
     }
   ];
@@ -290,7 +290,7 @@ const Home: React.FC = () => {
     },
     {
       question: "キャンセルはできますか？",
-      answer: "制作開始前であればキャンセル可能です。ただし、制作開始後のキャンセルについては、進行状況に応じてキャンセル料が発生いたします。詳しくはキャンセルポリシーをご確認ください。"
+      answer: "ご入金前であればキャンセル可能です。詳しくはキャンセルポリシーをご確認ください。<br/><br/><Link to='/policy' className='policy-link'>→ キャンセルポリシーはこちら</Link>"
     },
     {
       question: "修正は可能ですか？",
@@ -408,6 +408,9 @@ const Home: React.FC = () => {
       <section className="about-preview" id="about-section">
         <h2>About</h2>
         <div className="about-content">
+          <div className="about-image">
+            <img src={aboutImage} alt="イラストレーターの写真" />
+          </div>
           <div className="about-text">
             <h3>nayu</h3>
             <p>
@@ -429,16 +432,10 @@ const Home: React.FC = () => {
 イラストになったアナタに、きっと愛着が湧いちゃう "キャラクターチック" なイラストと、
 "オトナカワイイ" を意識した、甘すぎず・シックすぎずなカラーリングで、
 ずっとアナタの側に寄り添い続ける、愛おしいイラストを心を込めてお描きします。
-<br />
-<p className="concept-text">皆さまの「特別な日」だけでなく「何気ない日々」にも"甘い魔法"をかけるように、
-願いを込めて…</p>
-
-
             </p>
+            <p className="concept-text">皆さまの「特別な日」だけでなく「何気ない日々」にも"甘い魔法"をかけるように、
+願いを込めて…</p>
             <Link to="/about" className="read-more">Read more</Link>
-          </div>
-          <div className="about-image">
-            <img src={aboutImage} alt="イラストレーターの写真" />
           </div>
         </div>
       </section>
@@ -486,13 +483,21 @@ const Home: React.FC = () => {
           <div className="service-menu">
             <h3>Menu</h3>
             <ul className="service-list">
-              <li>○ウェディングイラスト：¥3,000〜</li>
-              <li>○結婚証明書：¥6,500〜</li>
+              <li>
+                <h4>ウェディングイラスト</h4>
+                <p>データ納品：¥3,000〜</p>
+                <p>現物納品：¥13,000〜</p>
+              </li>
+              <li>
+                <h4>結婚証明書</h4>
+                <p>データ納品：¥5,000〜</p>
+                <p>現物納品：¥13,000〜</p>
+              </li>
             </ul>
-            <p className="service-note">
-              ※こちらはデータ納品でのお値段です。印刷までをご希望の方は別途料金がかかります。<br />
-              InstagramのDMよりご相談ください。
-            </p>
+            <div className="service-note">
+              <p>※オプションの有無、現物納品の場合はお住まいの地域やキャンバスサイズなどにより価格が変動いたしますので、詳しくはInstagramのダイレクトメッセージよりお問い合わせください。</p>
+              <p>お見積もりをさせていただきます。</p>
+            </div>
           </div>
           
           <div className="service-example">
@@ -523,17 +528,19 @@ const Home: React.FC = () => {
           
           <div className="order-step">
             <h2>HOW TO ORDER</h2>
-            <div className="order-steps">
-              {orderSteps.map((step, index) => (
-                <OrderStep
-                  key={index}
-                  number={step.number}
-                  title={step.title}
-                  description={step.description}
-                  image={step.image}
-                  isLast={index === orderSteps.length - 1}
-                />
-              ))}
+            <div className="flow-content">
+              <div className="flow-steps">
+                {orderSteps.map((step, index) => (
+                  <OrderStep
+                    key={index}
+                    number={step.number}
+                    title={step.title}
+                    description={step.description}
+                    image={step.image}
+                    isLast={index === orderSteps.length - 1}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

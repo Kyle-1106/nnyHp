@@ -32,20 +32,8 @@ const CancellationPolicy: React.FC = () => {
             <div className="table-cell">無料</div>
           </div>
           <div className="table-row">
-            <div className="table-cell">ご入金後、制作開始前</div>
-            <div className="table-cell">ご入金額の30%</div>
-          </div>
-          <div className="table-row">
-            <div className="table-cell">ラフ案提出後</div>
-            <div className="table-cell">ご入金額の50%</div>
-          </div>
-          <div className="table-row">
-            <div className="table-cell">本制作開始後</div>
-            <div className="table-cell">ご入金額の80%</div>
-          </div>
-          <div className="table-row">
-            <div className="table-cell">完成品納品後</div>
-            <div className="table-cell">返金不可</div>
+            <div className="table-cell">ご入金後</div>
+            <div className="table-cell">返品不可</div>
           </div>
         </div>
       </section>
@@ -59,23 +47,15 @@ const CancellationPolicy: React.FC = () => {
       </section>
       
       <section className="policy-section">
-        <h2>3. 返金について</h2>
-        <p>
-          キャンセル料を差し引いた金額を、お客様の指定する銀行口座へ返金いたします。
-          返金手続きには、1週間程度お時間をいただく場合がございます。
-        </p>
-      </section>
-      
-      <section className="policy-section">
-        <h2>4. 制作者側の事情による中止について</h2>
+        <h2>3. 制作者側の事情による中止について</h2>
         <p>
           制作者側の事情（病気・事故等）により制作の継続が困難となった場合は、
-          制作の進行状況に応じて、適切な金額を返金させていただきます。
+          全額を返金させていただきます。
         </p>
       </section>
       
       <section className="policy-section">
-        <h2>5. 免責事項</h2>
+        <h2>4. 免責事項</h2>
         <p>
           天災・事故・通信障害等の不可抗力により生じた損害については、責任を負いかねます。
           また、お客様のご都合による納期の遅延に関しては、追加料金が発生する場合がございます。

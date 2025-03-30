@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import './Modal.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -53,24 +53,36 @@ const VoiceModal: React.FC<VoiceModalProps> = ({
           <FontAwesomeIcon icon={faTimes} />
         </button>
         <div className="modal-body">
-          <div className="modal-image">
-            {images.length > 1 ? (
-              <Slider {...carouselSettings}>
-                {images.map((img, index) => (
-                  <div key={index} className="voice-carousel-item">
-                    <img src={img} alt={`${title} - 画像 ${index + 1}`} />
-                  </div>
-                ))}
-              </Slider>
-            ) : (
-              <img src={images[0]} alt={title} />
-            )}
+          <div className="modal-image-container">
+            <div className="modal-image">
+              {images.length > 1 ? (
+                <Slider {...carouselSettings}>
+                  {images.map((img, index) => (
+                    <div key={index} className="voice-carousel-item">
+                      <img src={img} alt={`${title} - 画像 ${index + 1}`} />
+                    </div>
+                  ))}
+                </Slider>
+              ) : (
+                <img src={images[0]} alt={title} />
+              )}
+            </div>
           </div>
           <div className="modal-info">
-            <span className="modal-category">{category}</span>
-            <h3 className="modal-title">{title}</h3>
-            <div className="modal-description">
-              <p>{description}</p>
+            <div className="modal-info-content">
+              <div className="modal-category-wrapper">
+                <span className="modal-category">{category}</span>
+              </div>
+              <h3 className="modal-title">{title}</h3>
+              <div className="voice-message">
+                <div className="voice-message-header">
+                  <FontAwesomeIcon icon={faQuoteLeft} className="quote-icon" />
+                  <span>お客様の声</span>
+                </div>
+                <div className="voice-message-content">
+                  <p>{description}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

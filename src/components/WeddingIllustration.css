@@ -103,38 +103,73 @@
   font-family: 'Playfair Display', 'Noto Serif JP', serif;
 }
 
-.price-content {
+.wedding-price .price-content {
   max-width: 900px;
   margin: 0 auto;
 }
 
-.price-item {
+.wedding-price .price-item {
   margin-bottom: 40px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-.price-item h3 {
+.wedding-price .price-item h3 {
   font-size: 1.8rem;
   color: #6a8ba6;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   font-family: 'Playfair Display', 'Noto Serif JP', serif;
 }
+.wedding-price .price-welcome-board {
+ 
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 
-.price-amount {
+.wedding-price .price-amount {
   font-size: 2rem;
   font-weight: bold;
+  color: #333;
   margin-bottom: 20px;
-  color: #333;
 }
 
-.price-description {
-  margin-top: 20px;
-  line-height: 1.6;
+.wedding-price .price-description {
+  margin-top: 0px;
 }
 
-.price-detail-item {
-  margin: 10px 0;
+.wedding-price .price-detail-item {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.wedding-price .price-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 10px 20px;
+}
+
+.wedding-price .price-detail-list li {
   font-size: 1rem;
-  color: #333;
+  color: #666;
+  margin: 8px 0;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1em;
+}
+
+.wedding-price .price-detail-list li::before {
+  content: "※";
+  position: absolute;
+  left: -1em;
+  color: #6a8ba6;
+}
+
+.wedding-price .price-thankyou-card {
+  margin-top: 60px;
+  margin-bottom: 10px;
 }
 
 .option-list {
@@ -329,15 +364,216 @@
     font-size: 2rem;
   }
   
-  .price-item h3 {
+  .wedding-price .price-item {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .wedding-price .price-item h3 {
     font-size: 1.5rem;
   }
   
-  .price-amount {
+  .wedding-price .price-amount {
     font-size: 1.8rem;
+  }
+  
+  .wedding-price .price-detail-item {
+    font-size: 1rem;
+  }
+  
+  .wedding-price .price-detail-list li {
+    font-size: 0.9rem;
   }
   
   .step-details h3 {
     font-size: 1.2rem;
+  }
+}
+
+.wedding-illustration-image {
+  margin: 60px 0;
+}
+
+.sample-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sample-item {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+}
+
+.sample-item h3 {
+  font-size: 1.4rem;
+  color: #6a8ba6;
+  margin-bottom: 20px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.sample-image {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sample-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.sample-image:hover img {
+  transform: scale(1.02);
+}
+
+.sample-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .sample-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .sample-item {
+    max-width: 100%;
+  }
+
+  .sample-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .sample-description {
+    font-size: 0.9rem;
+  }
+}
+
+.example {
+  margin: 40px 0;
+}
+
+.example-title {
+  font-size: 1.8rem;
+  color: #6a8ba6;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', 'Noto Serif JP', serif;
+}
+
+.popular-plans {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.plan-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.plan-item h4 {
+  font-size: 1.3rem;
+  color: #6a8ba6;
+  margin-bottom: 15px;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.plan-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.plan-price {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.plan-details {
+  color: #555;
+}
+
+.plan-details p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.plan-details ul {
+  list-style: none;
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.plan-details li {
+  margin: 8px 0;
+  position: relative;
+  padding-left: 1em;
+}
+
+.plan-details li::before {
+  content: "・";
+  position: absolute;
+  left: -0.5em;
+  color: #6a8ba6;
+}
+
+.plan-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.plan-note {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .popular-plans {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .plan-item {
+    padding: 20px;
+  }
+
+  .example-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .plan-item h4 {
+    font-size: 1.2rem;
+  }
+
+  .plan-name {
+    font-size: 1.1rem;
+  }
+
+  .plan-price {
+    font-size: 1.6rem;
+  }
+
+  .plan-description {
+    font-size: 0.9rem;
   }
 } 

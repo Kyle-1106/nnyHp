@@ -48,7 +48,7 @@ import 'slick-carousel/slick/slick-theme.css';
 // FAQアコーディオンコンポーネント
 interface FAQItemProps {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
   isOpen: boolean;
   onClick: () => void;
 }
@@ -282,7 +282,13 @@ const Home: React.FC = () => {
     },
     {
       question: "キャンセルはできますか？",
-      answer: "ご入金前であればキャンセル可能です。詳しくはキャンセルポリシーをご確認ください。<br/><br/><Link to='/policy' className='policy-link'>→ キャンセルポリシーはこちら</Link>"
+      answer: (
+        <>
+          ご入金前であればキャンセル可能です。詳しくはキャンセルポリシーをご確認ください。
+          
+          <Link to='/policy' className='policy-link'>→ キャンセルポリシーはこちら</Link>
+        </>
+      )
     },
     {
       question: "修正は可能ですか？",

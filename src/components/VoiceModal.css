@@ -164,9 +164,9 @@
 /* カルーセル関連のスタイル */
 .voice-carousel-item {
   padding: 10px;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
 }
 
 .voice-carousel-item img {

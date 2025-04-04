@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faStar } from '@fortawesome/free-solid-svg-icons';
-import './Modal.css';
+import './WorksModal.css';
 
 interface WorksModalProps {
   isOpen: boolean;
@@ -53,7 +53,6 @@ const WorksModal: React.FC<WorksModalProps> = ({
                   <div className="highlight-points-content">
                     {highlightPoints.map((point, index) => (
                       <div key={index} className="highlight-point">
-                        <span className="point-marker"></span>
                         {point}
                       </div>
                     ))}

@@ -51,9 +51,9 @@ const WeddingIllustration: React.FC = () => {
         <p className="subtitle">ウェディングイラスト</p>
         <div className="hero-description">
           <p>
-            お二人の大切な瞬間を、温かみのある手描き風イラストで残します。<br />
-            ウェルカムボードやサンキューカードなど、様々な用途でご利用いただけます。<br />
-            データで納品して、お客様で印刷を行なっていただくことも、印刷まで行って発送することも可能です。
+          nayuの温かみのある手描きイラストで、愛着の湧いちゃうキャラクターになったおふたりを残しませんか？<br />
+          ウェルカムボードやサンキューカードなど、様々な用途でご利用いただけます。<br />
+          データで納品して、お客様で印刷を行なっていただくことも、印刷まで行って発送することも可能です。
           </p>
         </div>
         <div className="wedding-illustration-image">
@@ -64,7 +64,9 @@ const WeddingIllustration: React.FC = () => {
                 <img src={voice1} alt="ウェルカムボードサンプル" />
               </div>
               <p className="sample-description">
-                おふたりらしさを大切に、温かみのある雰囲気で描かせていただきます。
+              ゲストの皆さまの目を引く、イラストのウェルカムボード。<br />
+              ウェルカムボードにオススメのイラストは、ウェディングドレスのイラストです。<br />
+イラストのウェルカムボードなら結婚式後もインテリアとしてご自宅に飾りやすいです。  
               </p>
             </div>
             <div className="sample-item">
@@ -73,7 +75,8 @@ const WeddingIllustration: React.FC = () => {
                 <img src={voice2} alt="サンキューカードサンプル" />
               </div>
               <p className="sample-description">
-                ウェルカムボードと統一感のあるデザインで、心を込めて制作いたします。
+              サンキューカードには、ゲストの皆さまがワクワクしていたお色直し後のイラストになったおふたりを描き、ゲストの皆さまに連れて帰っていただけます。<br />
+ウェルカムボードとの統一感もあり、オシャレ度がアップします。
               </p>
             </div>
           </div>
@@ -89,7 +92,7 @@ const WeddingIllustration: React.FC = () => {
             <div className="price-item">
               <h3>データ納品</h3>
               <p className="price-amount">¥3,000〜</p>
-              <p>ウェルカムボード、サンキューカードなど、様々な用途でご利用いただけます。キャンバスをご自身で選びたい方におすすめです</p>
+              <p>ウェルカムボード、サンキューカードなど、様々な用途でご利用いただけます。印刷するボードの質感やサイズをご自身で選びたい方におすすめです</p>
               <div className="price-description">
                 <p className="price-detail-item">内容：おふたりのイラスト</p>
                 <p className="price-detail-item">納品形式：</p>
@@ -100,27 +103,27 @@ const WeddingIllustration: React.FC = () => {
 
             <div className="price-item">
               <h3>現物納品</h3>
-              <p className="price-description">キャンバスの選び方がわからなかったり、印刷が面倒な方におすすめです。<br />
+              <p className="price-description">印刷するボードの選び方がわからなかったり、ご自身での印刷が不安な方におすすめです。<br />
                 お住まいの地域やキャンバスのサイズ、印刷枚数に応じて料金が変動しますので、詳しくはInstagramのDMよりお問い合わせください。</p>
               <p className="price-welcome-board">⚪︎ウェルカムボード</p>
               <p className="price-amount">¥13,000〜</p>
+              <p>※こちらの料金はイラスト代+印刷代のお値段です。</p>
               <div className="price-description">
-                <p className="price-detail-item">内容：おふたりのイラスト</p>
+                <p className="price-detail-item">内容：おふたりのイラスト,オプション設定の背景や文字</p>
                 <p className="price-detail-item">納品形式：キャンバスプリント</p>
                 <ul className="price-detail-list">
                   <li>サイズ：A4 / A3 </li>
-                  <li>※額縁は含まれません</li>
                 </ul>
               </div>
               <p className="price-thankyou-card">⚪︎サンキューカード</p>
               <p className="price-amount">¥8,000〜</p>
-              
+              <p>※こちらの料金はイラスト代+印刷代のお値段です。</p>
               <div className="price-description">
-                <p className="price-detail-item">内容：どんなイラストでも対応可能です。お気軽にご相談下さい。</p>
+                <p className="price-detail-item">内容：おふたりのイラスト,オプション設定の背景や文字</p>
                 <p className="price-detail-item">納品形式：サンキューカード</p>
                 <ul className="price-detail-list">
                   <li>サイズ：A4 / A3 / B4 / B3</li>
-                  <li>※枚数に応じて料金が変動します。</li>
+                  <li>枚数に応じて料金が変動します。</li>
                 </ul>
               </div>
             </div>
@@ -244,7 +247,7 @@ const WeddingIllustration: React.FC = () => {
                     onClick={() => openModal(
                       "文字入れと背景イラストサンプル", 
                       backIllustSample, 
-                      "お名前やメッセージなどの文字入れと、花や風景などのイラストを背景に追加します。"
+                      "お名前やメッセージなどの文字入れと、思い出の場所などをイラストの背景としてお描きします。"
                     )}
                   >
                     Sample Image
@@ -267,8 +270,10 @@ const WeddingIllustration: React.FC = () => {
                       <li>サンキューカード 100枚~（A5サイズ）</li>
                     </ul>
                     <p className="plan-description">
-                    印刷会社を自分で探すのが面倒な方、結婚式準備でお忙しい方におすすめです。
-                    nayuがイラスト作成からイラストの印刷までまるっとお手伝いします。
+                    印刷するボードの選び方がわからなかったり、ご自身での印刷が不安な方、
+忙しくてなかなか結婚式の準備ができない方にオススメです。<br />
+nayuがイラスト作成からイラストの印刷までまるっとお手伝いし、おふたりの一生に一度の日を仕上げます。
+
                     </p>
                     <p className="plan-note">※額縁は含まれません</p>
                     <p className="plan-note">※ウェルカムボードとサンキューカードを同じイラストを使用した場合です。異なるイラストを使用する場合は2枚分のイラスト料金が発生するため、21,000円~となります。</p>
@@ -307,14 +312,22 @@ const WeddingIllustration: React.FC = () => {
               <div className="step-number">1</div>
               <div className="step-details">
                 <h3>お問い合わせ</h3>
-                <p>InstagramのDMよりお問い合わせください。ご希望の内容や納期などをお伝えください。</p>
+                <p>InstagramのDMよりお問い合わせください。</p>
+                <p>DM例)<br />
+見積もり依頼<br />
+・ご希望納期<br />
+・結婚式の日取り<br />
+・イラストにしたいお写真<br />
+（まだ決まっていない場合や迷っている場合などはそのようにお伝えいただければ、お写真選びから一緒にさせていただきます）</p>
               </div>
             </div>
             <div className="flow-step">
               <div className="step-number">2</div>
               <div className="step-details">
                 <h3>お見積り・ご契約</h3>
-                <p>ご要望に基づいてお見積りをご提示します。ご納得いただけましたら、契約内容の確認と入金をお願いします。</p>
+                <p>ご要望に基づいてお見積りをご提示します。<br />
+                  ご納得いただけましたら、内容の確認と入金をお願いします。<br />
+先払いの銀行振込、また、手数料に関しましてはお客様ご負担でお願いしております。</p>
               </div>
             </div>
             <div className="flow-step">
@@ -328,7 +341,8 @@ const WeddingIllustration: React.FC = () => {
               <div className="step-number">4</div>
               <div className="step-details">
                 <h3>本制作・修正</h3>
-                <p>ラフ案をもとに本制作を行います。完成後、必要に応じて2回まで無料で修正対応いたします。</p>
+                <p>ラフ案をもとに本制作を行います。<br />
+                ポーズや構図などをご確認いただきます。</p>
               </div>
             </div>
             <div className="flow-step">
@@ -355,7 +369,7 @@ const WeddingIllustration: React.FC = () => {
         isOpen={modalOpen}
         onClose={closeModal}
         title={modalContent.title}
-        image={modalContent.image}
+        images={[modalContent.image]}
         description={modalContent.description}
       />
     </div>

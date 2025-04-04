@@ -11,7 +11,6 @@ import './components/Home.css';
 import './components/About.css';
 import './components/WeddingIllustration.css';
 import './components/MarriageCertificate.css';
-import './components/Modal.css';
 import './components/WeddingOptionModal.css';
 import './components/CancellationPolicy.css';
 import './components/NotFound.css';

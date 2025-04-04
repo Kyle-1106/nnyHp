@@ -78,10 +78,10 @@ const MarriageCertificate: React.FC = () => {
                 <div className="option-description">
                   オプション：
                   <ul>
-                    <li>・人物(ペット)の追加 <span className="option-price">¥1,000/1匹</span></li>
-                    <li>・写真にないアイテムの追加 <span className="option-price">¥500/1つ</span></li>
-                    <li>・和装 <span className="option-price">¥500</span></li>
-                    <li>・ドレスのレースや和柄の細かい柄の描き込み <span className="option-price">¥1,000</span></li>
+                    <li>・人物(ペット)の追加 <span className="option-price">+¥1,000/人</span></li>
+                    <li>・写真にないアイテムの追加 <span className="option-price">+¥500~/個</span></li>
+                    <li>・和装 <span className="option-price">+¥500</span></li>
+                    <li>・ドレスのレースや和柄の細かい柄の描き込み <span className="option-price">+¥1,000</span></li>
                   </ul>
                 </div>
 
@@ -145,8 +145,9 @@ const MarriageCertificate: React.FC = () => {
             <div className="price-description">
               <p>基本料金に含まれるもの：</p>
               <p>①データ納品の全内容</p>
-              <p>②キャンバス印刷</p>
-              <p className="price-note">※キャンバスサイズはA3,A4のどちらかをお選びいただきます。</p>
+              <p>②高級感のある上質紙厚紙印刷</p>
+              <p className="price-note">※サイズはA3,A4のどちらかをお選びいただきます。<br/>
+              ※※ ゲストが61名以上の場合は、A3サイズ推奨</p>
               <p>③送料</p>
               
 
@@ -170,35 +171,44 @@ const MarriageCertificate: React.FC = () => {
               <div className="step-number">1</div>
               <div className="step-details">
                 <h3>お問い合わせ</h3>
-                <p>InstagramのDMよりお問い合わせください。ご希望のデザインや内容、納期などをお伝えください。</p>
+                <p>InstagramのDMよりお問い合わせください。</p>
+                <p>DM例)<br />
+見積もり依頼<br />
+・ご希望納期<br />
+・結婚式の日取り<br />
+・イラストにしたいお写真<br />
+（まだ決まっていない場合や迷っている場合などはそのようにお伝えいただければ、お写真選びから一緒にさせていただきます）</p>
               </div>
             </div>
             <div className="flow-step">
               <div className="step-number">2</div>
               <div className="step-details">
                 <h3>お見積り・ご契約</h3>
-                <p>ご要望に基づいてお見積りをご提示します。ご納得いただけましたら、契約内容の確認と入金をお願いします。</p>
+                <p>ご要望に基づいてお見積りをご提示します。<br />
+                ご納得いただけましたら、内容の確認と入金をお願いします。<br />
+先払いの銀行振込、また、手数料に関しましてはお客様ご負担でお願いしております。</p>
               </div>
             </div>
             <div className="flow-step">
               <div className="step-number">3</div>
               <div className="step-details">
-                <h3>デザイン案作成</h3>
-                <p>お二人のイメージに合わせたデザイン案を作成し、ご確認いただきます。</p>
+                <h3>ラフ案作成</h3>
+                <p>お写真を元にラフ案を作成します。ポーズや構図などをご確認いただきます。</p>
               </div>
             </div>
             <div className="flow-step">
               <div className="step-number">4</div>
               <div className="step-details">
-                <h3>修正・確定</h3>
-                <p>デザイン案に対するご要望があれば修正し、最終デザインを確定します。</p>
+                <h3>本制作・修正</h3>
+                <p>ラフ案をもとに本制作を行います。<br />
+                ポーズや構図などをご確認いただきます。</p>
               </div>
             </div>
             <div className="flow-step">
               <div className="step-number">5</div>
               <div className="step-details">
                 <h3>納品</h3>
-                <p>完成した結婚証明書をデータまたは印刷物でお届けします。額装オプションをご選択の場合は、額に入れてお届けします。</p>
+                <p>完成したイラストをデータで納品いたします。印刷をご希望の場合は別途ご相談ください。</p>
               </div>
             </div>
           </div>
@@ -219,7 +229,7 @@ const MarriageCertificate: React.FC = () => {
         isOpen={modalOpen}
         onClose={closeModal}
         title={modalContent.title}
-        image={modalContent.image}
+        images={[modalContent.image]}
         description={modalContent.description}
       />
     </div>

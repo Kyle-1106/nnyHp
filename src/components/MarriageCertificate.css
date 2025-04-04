@@ -231,6 +231,8 @@
 .certificate-flow {
   padding: 60px 0;
   background-color: #fcfcf2;
+  border-radius: 40px;
+  margin-bottom: 40px;
 }
 
 .certificate-flow h2 {

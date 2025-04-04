@@ -77,7 +77,7 @@ const VoiceModal: React.FC<VoiceModalProps> = ({
               <div className="voice-message">
                 <div className="voice-message-header">
                   <FontAwesomeIcon icon={faQuoteLeft} className="quote-icon" />
-                  <span>お客様の声</span>
+                  <span>お客様の声(一部抜粋)</span>
                 </div>
                 <div className="voice-message-content">
                   <p>{description}</p>

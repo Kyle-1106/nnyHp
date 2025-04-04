@@ -75,7 +75,7 @@ const WeddingIllustration: React.FC = () => {
                 <img src={voice2} alt="サンキューカードサンプル" />
               </div>
               <p className="sample-description">
-              サンキューカードには、ゲストの皆さまがワクワクしていたお色直し後のイラストになったおふたりを描き、ゲストの皆さまに連れて帰っていただけます。<br />
+              サンキューカードには、ゲストの皆さまがワクワクしていたお色直し後のイラストになったおふたりを描くと、ゲストの皆さまにお色直し後の印象を残しつつ、イラストになったおふたりを連れて帰っていただけます。<br />
 ウェルカムボードとの統一感もあり、オシャレ度がアップします。
               </p>
             </div>
@@ -120,9 +120,9 @@ const WeddingIllustration: React.FC = () => {
               <p>※こちらの料金はイラスト代+印刷代のお値段です。</p>
               <div className="price-description">
                 <p className="price-detail-item">内容：おふたりのイラスト,オプション設定の背景や文字</p>
-                <p className="price-detail-item">納品形式：サンキューカード</p>
+                <p className="price-detail-item">納品形式：ケント紙(厚め)※ボールペンなどで筆記可能</p>
                 <ul className="price-detail-list">
-                  <li>サイズ：A4 / A3 / B4 / B3</li>
+                  <li>サイズ：91×55mm(一般的な名刺サイズ)</li>
                   <li>枚数に応じて料金が変動します。</li>
                 </ul>
               </div>
@@ -267,7 +267,7 @@ const WeddingIllustration: React.FC = () => {
                     <p>セット内容：</p>
                     <ul>
                       <li>ウェルカムボード（A4,A3サイズ）</li>
-                      <li>サンキューカード 100枚~（A5サイズ）</li>
+                      <li>サンキューカード 100枚~（91×55mmサイズ）</li>
                     </ul>
                     <p className="plan-description">
                     印刷するボードの選び方がわからなかったり、ご自身での印刷が不安な方、
@@ -283,7 +283,7 @@ nayuがイラスト作成からイラストの印刷までまるっとお手伝�
                 <div className="plan-item">
                   <h4>人気プラン②</h4>
                   <p className="plan-name">ウェルカムボード＆サンキューカード データ納品セット</p>
-                  ここに画像を入れる
+                  ウェルカムボードにはウェデイングドレスのイラストをサンキューカードにはお色直し後のイラストを♪
                   <p className="plan-price">¥6,000〜</p>
                   <div className="plan-details">
                     <p>セット内容：</p>

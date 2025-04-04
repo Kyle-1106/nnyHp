@@ -49,8 +49,8 @@
   position: relative;
   border-radius: 20px;
   overflow: visible;
-  box-shadow: 0 8px 20px rgba(106, 139, 166, 0.15);
   height: fit-content;
+  padding: 0 50px;
 }
 
 .modal-image {
@@ -129,8 +129,8 @@
 }
 
 .modal-title {
+  color: #6a8ba6;
   font-size: 1.5rem;
-  color: #333;
   margin: 0;
   font-weight: 600;
 }
@@ -186,11 +186,11 @@
 }
 
 .slick-prev {
-  left: -50px;
+  left: 0;
 }
 
 .slick-next {
-  right: -50px;
+  right: 0;
 }
 
 .slick-prev:before,
@@ -242,7 +242,7 @@
 
   .modal-image-container {
     width: 100%;
-    padding: 0 30px;
+    padding: 0 40px;
   }
 
   .modal-info {
@@ -267,11 +267,11 @@
   }
 
   .slick-prev {
-    left: -35px;
+    left: 5px;
   }
 
   .slick-next {
-    right: -35px;
+    right: 5px;
   }
 
   .slick-dots {

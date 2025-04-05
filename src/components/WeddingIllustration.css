@@ -514,6 +514,11 @@
   margin-bottom: 15px;
   font-weight: bold;
 }
+.plan-title {
+  margin-top: -10px;
+  color: #333;
+  margin-bottom: 15px;
+}
 
 .plan-price {
   font-size: 2rem;

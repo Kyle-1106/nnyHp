@@ -174,7 +174,8 @@
 
 .option-description ul li {
   margin: 5px 0;
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .option-section {

@@ -1,311 +1,188 @@
-/* VoiceModalのスタイル */
 .modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  backdrop-filter: blur(5px);
+  z-index: 999;
+  padding: 40px 0; /* 上下のパディングを追加 */
 }
 
 .modal-content {
-  background-color: #fcfcf2;
-  border-radius: 30px;
-  padding: 30px;
-  position: relative;
+  background-color: #fdfbe9;
+  border-radius: 10px;
+  overflow: hidden;
   width: 90%;
-  max-width: 1000px;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  animation: modalFadeIn 0.3s ease-out;
-}
-
-@keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  margin: auto; /* 中央配置を調整 */
+  margin-top: 60px;
 }
 
 .modal-body {
-  padding: 20px;
   display: flex;
-  gap: 40px;
-  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 .modal-image-container {
-  flex: 1.2;
-  position: relative;
-  border-radius: 20px;
-  overflow: visible;
-  height: fit-content;
-  padding: 0 50px;
-}
-
-.modal-image {
   position: relative;
   width: 100%;
-  border-radius: 15px;
-  overflow: hidden;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #fff;
+  border: none;
+  color: #666;
+  font-size: 24px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .modal-image img {
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 15px;
-  object-fit: contain;
-}
-
-.modal-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6a8ba6;
-  font-size: 1.5rem;
-  box-shadow: 0 3px 10px rgba(106, 139, 166, 0.1);
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.modal-close:hover {
-  transform: rotate(90deg);
-  background-color: #6a8ba6;
-  color: white;
-}
-
-.modal-info {
-  flex: 0.8;
-  background-color: white;
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 5px 15px rgba(106, 139, 166, 0.1);
-  height: fit-content;
-}
-
-.modal-info-content {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  border-radius: 10px;
 }
 
 .modal-category-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  margin-bottom: 10px;
 }
 
 .modal-category {
   background-color: #6a8ba6;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .modal-title {
-  color: #6a8ba6;
-  font-size: 1.5rem;
-  margin: 0;
-  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .voice-message {
-  background-color: #f8f9fa;
-  border-radius: 15px;
-  padding: 20px;
-  margin-top: 10px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .voice-message-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-  color: #6a8ba6;
-  font-weight: 500;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .quote-icon {
-  font-size: 1.2rem;
+  margin-right: 5px;
+  color: #6a8ba6;
 }
 
 .voice-message-content {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 16px;
   color: #333;
+  text-align: center;
 }
 
-/* カルーセル関連のスタイル */
-.voice-carousel-item {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.voice-carousel-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  object-fit: cover;
-}
-
-/* Slick Carouselのカスタマイズ */
-.slick-prev,
-.slick-next {
-  z-index: 1000;
-  width: 40px;
-  height: 40px;
-  transform: translateY(-50%);
-}
-
-.slick-prev {
-  left: 0;
-}
-
-.slick-next {
-  right: 0;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-size: 40px;
-  color: #6a8ba6;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.slick-prev:hover:before,
-.slick-next:hover:before {
-  opacity: 1;
-}
-
-/* スリックドットのスタイル */
-.slick-dots {
-  bottom: -25px;
-  z-index: 1000;
-}
-
-.slick-dots li {
-  margin: 0 5px;
-}
-
-.slick-dots li button:before {
-  font-size: 12px;
-  color: #6a8ba6;
-  opacity: 0.5;
-}
-
-.slick-dots li.slick-active button:before {
-  color: #6a8ba6;
-  opacity: 1;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
+/* PC・タブレット（横向き）用のスタイル */
+@media (min-width: 768px) and (orientation: landscape) {
   .modal-content {
-    padding: 20px;
-    max-height: 85vh;
+    max-width: 1000px;
+    padding: 30px;
+    margin: 40px auto;
   }
 
   .modal-body {
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+    position: relative;
   }
 
   .modal-image-container {
-    width: 100%;
-    padding: 0 40px;
+    width: 50%;
+    margin-bottom: 0;
+    position: relative;
+    padding: 0 40px; /* 矢印のスペースを確保 */
   }
 
   .modal-info {
-    width: 100%;
-  }
-
-  .modal-close {
-    top: 10px;
-    right: 10px;
-    font-size: 1.2rem;
-  }
-
-  .slick-prev,
-  .slick-next {
-    width: 30px;
-    height: 30px;
-  }
-
-  .slick-prev:before,
-  .slick-next:before {
-    font-size: 30px;
-  }
-
-  .slick-prev {
-    left: 5px;
-  }
-
-  .slick-next {
-    right: 5px;
-  }
-
-  .slick-dots {
-    bottom: -20px;
-  }
-
-  .slick-dots li button:before {
-    font-size: 10px;
+    width: 50%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-@media (max-width: 576px) {
-  .modal-content {
-    width: 95%;
+/* スライダーの矢印のスタイル */
+.modal-image .slick-arrow {
+  width: 30px !important;
+  height: 30px !important;
+  z-index: 1;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-50%) !important;
+}
+
+.modal-image .slick-prev {
+  left: 0 !important;
+}
+
+.modal-image .slick-next {
+  right: 0 !important;
+}
+
+.modal-image .slick-prev:before,
+.modal-image .slick-next:before {
+  font-size: 20px !important;
+  opacity: 1 !important;
+  color: #6a8ba6 !important;
+  line-height: 1 !important;
+}
+
+/* スライダーの矢印のホバー効果 */
+.modal-image .slick-arrow:hover {
+  background-color: #f5f5f5 !important;
+}
+
+/* モバイル用のスタイル */
+@media (max-width: 767px) {
+  .modal-image-container {
+    padding: 0; /* モバイルではパディングを削除 */
   }
   
-  .modal-body {
-    padding: 20px;
+  .modal-image .slick-arrow {
+    width: 25px !important;
+    height: 25px !important;
   }
+  
+  .modal-image .slick-prev:before,
+  .modal-image .slick-next:before {
+    font-size: 16px !important;
+  }
+}
 
-  .modal-image-container {
-    width: 100%;
-    padding: 0 25px;
-  }
 
-  .modal-info {
-    width: 100%;
-  }
 
-  .slick-prev {
-    left: -30px;
-  }
-
-  .slick-next {
-    right: -30px;
-  }
-} 

@@ -39,13 +39,13 @@ a {
   z-index: 1000;
   background-color: #fcfcf2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem 0;
+  padding: 0.1rem 0;
 }
 
 .header-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 8px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -216,13 +216,13 @@ html {
 
 /* メインコンテンツのパディング調整 */
 main {
-  padding-top: 80px; /* ヘッダーの高さ分 */
+  padding-top: 60px;
 }
 
 /* メインコンテンツスタイル */
 main {
   flex: 1;
-  padding-top: 80px;
+  padding-top: 60px;
   background-color: #eeeee4;
 }
 

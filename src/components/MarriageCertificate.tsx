@@ -152,8 +152,8 @@ const MarriageCertificate: React.FC = () => {
 
               <div className="price-example">
                 <p>料金例：</p>
-                <p>基本料金(オプションなし)+A3サイズ+関東在住の方<br/></p>
-                <strong>¥18,000</strong>
+                <p>基本料金(オプションなし)+キャンドル(0~20名の場合)+A3サイズ+関東在住の方<br/></p>
+                <strong>¥17,000</strong>
               </div>
 
               <p className="price-note">※現物納品の場合、お住まいの地域によって送料が追加される場合があります。</p>

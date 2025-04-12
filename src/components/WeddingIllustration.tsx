@@ -262,7 +262,7 @@ const WeddingIllustration: React.FC = () => {
                   <h4>人気プラン①</h4>
                   <p className="plan-name">ウェルカムボード＆サンキューカード 現物納品セット</p>
                   
-                  <p className="plan-price">¥18,000〜</p>
+                  <p className="plan-price">¥17,000〜</p>
                   <div className="plan-details">
                     <p>セット内容：</p>
                     <ul>

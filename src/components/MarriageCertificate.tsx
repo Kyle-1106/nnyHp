@@ -66,7 +66,7 @@ const MarriageCertificate: React.FC = () => {
         <div className="price-content">
           <div className="price-item">
             <h3>データ納品</h3>
-            <p className="price-amount">¥5,000~</p>
+            <p className="price-amount">¥7,000~</p>
             <div className="price-description">
               <p>基本料金に含まれるもの：</p>
               <p>①おふたりのイラスト</p>
@@ -134,14 +134,14 @@ const MarriageCertificate: React.FC = () => {
               <div className="price-example">
                 <p>料金例：</p>
                 <p>ゲストの人数が0〜20名の場合<br/>
-                基本料金 ¥5,000(オプションなし) ＋ キャンドル料金 ¥1,500 ＝ <strong>¥6,500</strong></p>
+                基本料金 ¥7,000(オプションなし) ＋ キャンドル料金 ¥1,500 ＝ <strong>¥8,500</strong></p>
               </div>
             </div>
           </div>
 
           <div className="price-item">
             <h3>現物納品</h3>
-            <p className="price-amount">¥15,000~</p>
+            <p className="price-amount">¥18,000~</p>
             <div className="price-description">
               <p>基本料金に含まれるもの：</p>
               <p>①データ納品の全内容</p>
@@ -149,17 +149,25 @@ const MarriageCertificate: React.FC = () => {
               <p className="price-note">※サイズはA3サイズです</p>
               <p>③送料</p>
               
-
               <div className="price-example">
                 <p>料金例(関東在住の方)：</p>
                 <p>基本料金(オプションなし)+キャンドル(0~20名の場合)+A3サイズ+送料<br/></p>
-                <strong>¥17,000</strong>
+                <strong>¥19,000</strong>
               </div>
 
               <p className="price-note">※現物納品の場合、お住まいの地域によって送料が異なります。</p>
             </div>
-          </div>
-        </div>
+          </div>     
+          <div className="price-detail-item">
+          <h3>その他オプション</h3>
+                <ul className="option-list">
+                  <li>
+                    <span className="option-name">追加でおふたりのイラストのみを背景透過データで納品する場合</span>
+                    <span className="option-price">+¥500</span>
+                  </li>
+                </ul>
+              </div>
+          </div>   
       </section>
 
       <section className="certificate-flow">

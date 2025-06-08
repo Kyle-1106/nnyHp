@@ -91,7 +91,7 @@ const WeddingIllustration: React.FC = () => {
           <div className="price-details">
             <div className="price-item">
               <h3>データ納品</h3>
-              <p className="price-amount">¥3,000〜</p>
+              <p className="price-amount">¥6,000〜</p>
               <p>ウェルカムボード、サンキューカードなど、様々な用途でご利用いただけます。印刷するボードの質感やサイズをご自身で選びたい方におすすめです</p>
               <div className="price-description">
                 <p className="price-detail-item">内容：おふたりのイラスト</p>
@@ -106,7 +106,7 @@ const WeddingIllustration: React.FC = () => {
               <p className="price-description">印刷するボードの選び方がわからなかったり、ご自身での印刷が不安な方におすすめです。<br />
                 お住まいの地域やキャンバスのサイズ、印刷枚数に応じて料金が変動しますので、詳しくはInstagramのDMよりお問い合わせください。</p>
               <p className="price-welcome-board">⚪︎ウェルカムボード</p>
-              <p className="price-amount">¥13,000〜</p>
+              <p className="price-amount">¥16,000〜</p>
               <p>※こちらの料金はイラスト代+印刷代+送料のお値段です。</p>
               <div className="price-description">
                 <p className="price-detail-item">内容：おふたりのイラスト,オプション設定の背景や文字</p>
@@ -116,7 +116,7 @@ const WeddingIllustration: React.FC = () => {
                 </ul>
               </div>
               <p className="price-thankyou-card">⚪︎サンキューカード</p>
-              <p className="price-amount">¥8,000〜</p>
+              <p className="price-amount">¥11,000〜</p>
               <p>※こちらの料金はイラスト代+印刷代+送料のお値段です。</p>
               <div className="price-description">
                 <p className="price-detail-item">内容：おふたりのイラスト,オプション設定の背景や文字</p>
@@ -256,13 +256,12 @@ const WeddingIllustration: React.FC = () => {
               </ul>
             </div>
             <div className="example">
-              <h3 className="example-title">人気のプラン</h3>
               <div className="popular-plans">
                 <div className="plan-item">
-                  <h4>人気プラン①</h4>
+                  <h4>人気プラン</h4>
                   <p className="plan-name">ウェルカムボード＆サンキューカード 現物納品セット</p>
                   
-                  <p className="plan-price">¥17,000〜</p>
+                  <p className="plan-price">¥20,000〜</p>
                   <div className="plan-details">
                     <p>セット内容：</p>
                     <ul>
@@ -270,32 +269,15 @@ const WeddingIllustration: React.FC = () => {
                       <li>サンキューカード ~100枚（91×55mmサイズ）<br />※ 100枚以上をご希望の方は個別にInstagramのDMよりお問い合わせください</li>
                     </ul>
                     <p className="plan-description">
+                    ウェルカムボード（¥16,000〜）とサンキューカード（¥11,000〜）をセットでご依頼いただくと ¥20,000〜のご案内になります。<br />
+個別にご注文いただくよりも、お得な価格でご案内しております。<br />
+統一感のあるデザインで、特別な一日をより心に残るものに。<br />
                     印刷するボードの選び方がわからなかったり、ご自身での印刷が不安な方、
 忙しくてなかなか結婚式の準備ができない方にオススメです。<br />
 nayuがイラスト作成からイラストの印刷までまるっとお手伝いし、おふたりの一生に一度の日を仕上げます。
 
                     </p>
-                    <p className="plan-note">※ウェルカムボードとサンキューカードを同じイラストを使用した場合です。異なるイラストを使用する場合は2枚分のイラスト料金が発生するため、21,000円~となります。</p>
-                  </div>
-                </div>
-
-                <div className="plan-item">
-                  <h4>人気プラン②</h4>
-                  <p className="plan-name">ウェルカムボード＆サンキューカード データ納品セット</p>
-                  <p className="plan-title">~2つのイラストで特別な演出を~</p>
-                  <p className="plan-price">¥6,000〜</p>
-                  <div className="plan-details">
-                    <p>セット内容：</p>
-                    <ul>
-                      <li>ウェルカムボードデータ（JPG形式）</li>
-                      <li>サンキューカードデータ（JPG形式）</li>
-                    </ul>
-                    <p className="plan-description">
-                      お好みのサイズで印刷可能なデータをご提供。印刷会社やサイズをご自身で選べるため、
-                      よりフレキシブルにご利用いただけます。<br /><br />
-                      ウェルカムボードにはウェデイングドレスのイラスト、サンキューカードにはお色直し後のイラストにするのが人気の組み合わせです。
-                    </p>
-                    <p className="plan-note">※印刷費用は含まれません</p>
+                    <p className="plan-note">※こちらの料金はウェルカムボードとサンキューカードを同じイラストを使用した場合です。異なるイラストを使用する場合は2枚分のイラスト料金が発生するため、25,000円~となります。</p>
                   </div>
                 </div>
               </div>

@@ -10,6 +10,11 @@ import illust3 from '../assets/home/illustrations/illust3.png';
 import illust4 from '../assets/home/illustrations/illust4.png';
 import illust5 from '../assets/home/illustrations/illust5.png';
 import illust6 from '../assets/home/illustrations/illust6.png';
+import illust7 from '../assets/home/illustrations/illust7.png';
+import illust8 from '../assets/home/illustrations/illust8.png';
+import illust9 from '../assets/home/illustrations/illust9.png';
+import illust10 from '../assets/home/illustrations/illust10.png';
+import illust11 from '../assets/home/illustrations/illust11.png';
 // Voice画像のインポート
 import voice1 from '../assets/home/voices/voice1.png';
 import voice2 from '../assets/home/voices/voice2.png';
@@ -19,6 +24,14 @@ import voice5 from '../assets/home/voices/voice5.png';
 import voice6 from '../assets/home/voices/voice6.png';
 import voice7 from '../assets/home/voices/voice7.png';
 import voice8 from '../assets/home/voices/voice8.png';
+import voice9 from '../assets/home/voices/voice9.png';
+import voice10 from '../assets/home/voices/voice10.png';
+import voice11 from '../assets/home/voices/voice11.png';
+import voice12 from '../assets/home/voices/voice12.png';
+import voice13 from '../assets/home/voices/voice13.png';
+import voice14 from '../assets/home/voices/voice14.png';
+import voice15 from '../assets/home/voices/voice15.png';
+import voice16 from '../assets/home/voices/voice16.png';
 // Service画像のインポート
 import service1 from '../assets/home/services/service1.png';
 import service2 from '../assets/home/services/service2.png';
@@ -121,7 +134,6 @@ const Home: React.FC = () => {
     image: '',
     title: '',
     description: '',
-    category: '',
     images: [] as string[]
   });
   
@@ -157,7 +169,6 @@ const Home: React.FC = () => {
         title: person.title,
         description: person.description,
         images: person.images,
-        category: person.category
       });
       setVoiceModalOpen(true);
     }
@@ -258,7 +269,7 @@ const Home: React.FC = () => {
     {
       number: "3",
       title: "デザイン案作成",
-      description: "お二人のイメージに合わせたデザイン案を作成し、ご確認いただきます。",
+      description: "おふたりのイメージに合わせたデザイン案を作成し、ご確認いただきます。",
       image: orderStep3
     },
     {
@@ -311,6 +322,50 @@ const Home: React.FC = () => {
   
   // Worksデータ
   const worksData = [
+    {
+      image: illust7,
+      title: "お写真のクールな印象を残しつつイラストでかわいさをプラス！",
+      description: "前撮りのお写真をそのままイラストにして、ゲストの皆様も「写真のおふたりがイラストになってる！」と思わず愛着が湧いちゃうはず...♡",
+      highlightPoints: [
+        "お写真のポーズをそのままに再現！イラストになったかわいいおふたりです。",
+        "ドレスとタキシードの柄も再現しました。"
+      ]
+    },
+    {
+      image: illust9,
+      title: "おふたりのかわいらしい雰囲気を大切に…",
+      description: "キャラクターぽくなったイラストのおふたりが、おふたりの雰囲気をよりゲストの皆様に伝えてくれます。",
+      highlightPoints: [
+        "お写真を元に、イラストならではの目線を合わせたちょっぴりお茶目さをプラス！",
+        "おふたりのかわいらしいあたたかな雰囲気も残しつつ、愛らしいイラストに仕上げました。"
+      ]
+    },
+    {
+      image: illust8,
+      title: "セルフ前撮りの楽しい雰囲気をそのままイラストに！",
+      description: "ゲストの皆様におふたりの楽しくて明るい雰囲気が伝わるよう、いただいたお写真を見ながら、表情やポーズにこだわって書かせていただきました。",
+      highlightPoints: [
+        "お写真から溢れるおふたりの雰囲気を大切に、イラストを仕上げました!",
+        "前撮りのカワイイ衣装もそのままイラストに再現しています！"
+      ]
+    }, 
+    {
+      image: illust11,
+      title: "憧れのお姫様抱っこをイラストに！",
+      description: "イラストならお姫様抱っこの姿を結婚式後にずっとお家に飾っておいても恥ずかしくありません！ずっとおふたりの仲良しが続きますように！",
+      highlightPoints: [
+        "前撮りのお姫様抱っこのお写真をもとに、全身が見えるイラストを作成しました。",
+        "目線を合わせたりブーケを持たせたり、キャラクターちっくなイラストに仕上げました。"
+      ]
+    },
+     {
+      image: illust10,
+      title: "試着のお写真から、カワイイイラストに！",
+      description: "前撮り写真がなくても「ご希望のポーズ」「試着のお写真」「お顔のわかるお写真」を送っていただき、イラストにできます！",
+      highlightPoints: [
+        "カメラマンのご主人の手には、カメラを持たせて欲しい！という花嫁さまのカワイイ要望にもお応えさせていただきました！",
+      ]
+    },
     {
       image: illust1,
       title: "ブラックスタイルもカワイく！",
@@ -370,9 +425,37 @@ const Home: React.FC = () => {
   // Voiceデータ
   const voiceData = [
     {
+      id: "E",
+      image: voice9,
+      title: "ウェルカムボード&サンキューカード",
+      description: "丁寧な打ち合わせとスピード感、あたたかいメッセージの数々に感動でございます。あとはセンスの良さ全てに脱帽でございます。またご縁がありましたら、よろしくお願いします。必ずこの先ももっと忙しくなるでしょうし、もっと売れると断言できます！！今このタイミングでなゆさんと出会えたことに感謝いたします！！プチギフトにサンキューカード入れておしゃれで高見えしていい感じになりました！本当にありがとうございました！",
+      images: [voice9, voice10]
+    },
+    {
+      id: "F",
+      image: voice11,
+      title: "サンキューカード",
+      description: "サンキュータグ、友人から大好評でした！ありがとうございました！",
+      images: [voice11]
+    },
+    {
+      id: "G",
+      image: voice12,
+      title: "ウェルカムボード&サンキューカード",
+      description: "とても可愛くでゲストから大好評でした！また何か機会がありましたら、お願いさせてください〜！",
+      images: [voice12, voice13]
+    },
+    {
+      id: "H",
+      image: voice14,
+      title: "ウェルカムボード、プロフィールブック＆プロフィールムービー",
+      description: "カワイイです！ウェルカムボード、プロフィールブックの裏表紙、プロフィールムービーの途中にも使わせていただきました！",
+      images: [voice14, voice15, voice16]
+    },
+
+    {
       id: "A",
       image: voice1,
-      category: "Aさま",
       title: "ウェルカムボード&サンキューカード",
       description: "なゆさん、素敵なイラストを本当にありがとうございました！\nおかげでとっても可愛い結婚式になりました！\nまた機会があればよろしくお願いします！\nこれからも可愛いイラスト投稿楽しみにしてます！",
       images: [voice1, voice2]
@@ -380,7 +463,6 @@ const Home: React.FC = () => {
     {
       id: "B",
       image: voice3,
-      category: "Bさま",
       title: "ウェルカムボード&プロフィールブック",
       description: "めちゃくちゃ可愛くて\n2人でテンション上がってました！！\n\nドレスの裾が透けててほんとに可愛くてお気に入りです！\n裾のところめちゃくちゃ個人的に好きだったので、\nしっかり再現されててすごく嬉しいです！！\n\n絶対に同じポーズで写真撮りたいと思って、\n介添えの人にずっとお願いしてました！\n\nプロフィールブックにも使わせていただきました！\nいろんな人からかわいい！って言ってもらえて、\n大好評でした！！！\n本当にありがとうございました！！",
       images: [voice3, voice4, voice5]
@@ -388,7 +470,6 @@ const Home: React.FC = () => {
     {
       id: "C",
       image: voice6,
-      category: "Cさま",
       title: "ウェルカムボード&サンキューシール",
       description: "丁寧に対応してくださって感謝でいっぱいです！\n息子も入れたイラストを描いていただくのが夢だったので、\nこういった形で描いていただけて本当に嬉しいです！\n\n無事結婚式終びました！\nサンキューシールとウェルカムボードに使わせていただきました！\n友達だけじゃなくてプランナーさんにまで\n「この絵誰ですね！似顔絵？可愛い！」って言って貰えました！\n\nなゆさんの絵可愛すぎて本当に書いていただけて嬉しかったです！",
       images: [voice6, voice7]
@@ -396,7 +477,6 @@ const Home: React.FC = () => {
     {
       id: "D",
       image: voice8,
-      category: "Dさま",
       title: "ウェルカムボード",
       description: "ありがとうございます！\n旦那と2人で絶賛してます！！\n写真と比較してそのまますごすごいです顔は可愛くしてもらって感謝です",
       images: [voice8]
@@ -520,26 +600,6 @@ const Home: React.FC = () => {
       <section className="service-preview" id="service-section">
         <h2>SERVICE</h2>
         <div className="service-content">
-          <div className="service-menu">
-            <h3>Menu</h3>
-            <ul className="service-list">
-              <li>
-                <h4>ウェディングイラスト</h4>
-                <p>データ納品：¥3,000〜</p>
-                <p>現物納品：¥13,000〜</p>
-              </li>
-              <li>
-                <h4>結婚証明書</h4>
-                <p>データ納品：¥5,000〜</p>
-                <p>現物納品：¥15,000〜</p>
-              </li>
-            </ul>
-            <div className="service-note">
-              <p>※オプションの有無、現物納品の場合はお住まいの地域やキャンバスサイズなどにより価格が変動いたしますので、詳しくはInstagramのDMよりお問い合わせください。</p>
-              <p>お見積もりをさせていただきます。</p>
-              <p>※価格は予告なく変更になる場合がございます。</p>
-            </div>
-          </div>
           
           <div className="service-example">
             <div className="service-image">
@@ -561,7 +621,7 @@ const Home: React.FC = () => {
             <div className="service-info">
               <h3>結婚証明書</h3>
               <p className="service-description">
-                お二人だけの特別な結婚証明書をデザインします。思い出に残る一生の宝物になります。
+                おふたりだけの特別な結婚証明書をデザインします。思い出に残る一生の宝物になります。
               </p>
               <Link to="/service/marriage-certificate" className="service-read-more">Read more</Link>
             </div>
@@ -663,7 +723,6 @@ const Home: React.FC = () => {
         title={voiceModalContent.title}
         description={voiceModalContent.description}
         images={voiceModalContent.images}
-        category={voiceModalContent.category}
       />
     </div>
   );

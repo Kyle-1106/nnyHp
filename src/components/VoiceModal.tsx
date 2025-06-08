@@ -12,7 +12,6 @@ interface VoiceModalProps {
   image: string;
   title: string;
   description: string;
-  category: string;
   images: string[];
 }
 
@@ -21,7 +20,6 @@ const VoiceModal: React.FC<VoiceModalProps> = ({
   onClose, 
   title, 
   description, 
-  category,
   images
 }) => {
   if (!isOpen) return null;
@@ -70,9 +68,6 @@ const VoiceModal: React.FC<VoiceModalProps> = ({
           </div>
           <div className="modal-info">
             <div className="modal-info-content">
-              <div className="modal-category-wrapper">
-                <span className="modal-category">{category}</span>
-              </div>
               <h3 className="modal-title">{title}</h3>
               <div className="voice-message">
                 <div className="voice-message-header">

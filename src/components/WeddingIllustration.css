@@ -488,7 +488,7 @@
 
 .popular-plans {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
@@ -499,6 +499,7 @@
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 100%;
 }
 
 .plan-item h4 {

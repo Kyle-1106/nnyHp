@@ -22,10 +22,6 @@ const CancellationPolicy: React.FC = () => {
         </p>
         
         <div className="cancellation-table">
-          <div className="table-row header">
-            <div className="table-cell">キャンセル時期</div>
-            <div className="table-cell">キャンセル料</div>
-          </div>
           <div className="table-row">
             <div className="table-cell">ご依頼確定前（お見積り段階）</div>
             <div className="table-cell">無料</div>

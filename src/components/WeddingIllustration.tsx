@@ -253,6 +253,10 @@ const WeddingIllustration: React.FC = () => {
                     Sample Image
                   </button>
                 </p>
+                <li>
+                  <span className="option-name">⑨おふたりのイラストのみを背景透過データで納品</span>
+                  <span className="option-price">+¥500</span>
+                </li>   
               </ul>
             </div>
             <div className="example">

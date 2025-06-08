@@ -162,7 +162,7 @@ const MarriageCertificate: React.FC = () => {
           <h3>その他オプション</h3>
                 <ul className="option-list">
                   <li>
-                    <span className="option-name">追加でおふたりのイラストのみを背景透過データで納品する場合</span>
+                    <span className="option-name">おふたりのイラストのみを背景透過データで納品する場合</span>
                     <span className="option-price">+¥500</span>
                   </li>
                 </ul>

@@ -9,6 +9,10 @@ import WeddingOptionModal from './WeddingOptionModal';
 // import certificateSample2 from '../assets/service/certificate/sample2.jpeg';
 // import customDesignSample from '../assets/service/certificate/custom_design.jpeg';
 // import frameSample from '../assets/service/certificate/frame.jpeg';
+import addItemSample from '../assets/service/illustration/addItem.jpeg';
+import petSample from '../assets/service/illustration/pet.jpeg';
+import kimonoSample from '../assets/service/illustration/kimono.jpeg';
+import detailSample from '../assets/service/illustration/detail.jpeg';
 
 const MarriageCertificate: React.FC = () => {
   // モーダル状態管理
@@ -74,25 +78,96 @@ const MarriageCertificate: React.FC = () => {
               <p>③おふたりのお名前と日付入れ</p>
 
               <div className="option-section">
-                <h3 className="option-title">①おふたりのイラスト</h3>
                 <div className="option-description">
-                  オプション：
+                  {/* オプション：
                   <ul>
-                    <li>・人物(ペット)の追加 <span className="option-price">+¥1,000/人</span></li>
+                    <li>・人物(ペット)の追加 <span className="option-price">+¥2,000/人</span></li>
                     <li>・写真にないアイテムの追加 <span className="option-price">+¥500~/個</span></li>
-                    <li>・和装 <span className="option-price">+¥500</span></li>
-                    <li>・ドレスのレースや和柄の細かい柄の描き込み <span className="option-price">+¥1,000</span></li>
-                  </ul>
-                </div>
-
-                <h3 className="option-title">②おふたりの立っている場所と道のり部分</h3>
-                <div className="option-description">
-                  ゲストの人数（ロウソクの数）に合わせて道幅の調整と、おふたりのイラストのシルエットに合わせて、立っている場所の形の調節も行います！
-                </div>
-
-                <h3 className="option-title">③おふたりのお名前と日付入れ</h3>
-                <div className="option-description">
-                  おふたりのお名前と、大切な日付を入れることができます。
+                    <li>・和装 <span className="option-price">+¥1,000</span></li>
+                    <li>・ブーケ <span className="option-price">+¥1,000~</span></li>
+                    <li>・ドレスのレースや和柄の細かい柄の描き込み <span className="option-price">+¥1,000/人~</span></li>
+                  </ul> */}
+                  <h3>オプション</h3>
+              <ul className="option-list">
+                <li>
+                  <span className="option-name">①お急ぎコース</span>
+                  <span className="option-price">+¥2,000〜</span>
+                </li>
+                <p className="option-description">
+                  他のお客様よりも優先的に制作させていただきます。ただし、他のお客様とのスケジュールとの兼ね合いにより、お受けできない場合もございますので、あらかじめご了承ください。InstagramのDMにてお問い合わせください。
+                </p>
+                <li>
+                  <span className="option-name">②人物、ペットの追加</span>
+                  <span className="option-price">+¥2,000/人</span>
+                </li>
+                <p className="option-description">
+                  <button 
+                    className="sample-link" 
+                    onClick={() => openModal(
+                      "人物・ペットの追加サンプル", 
+                      petSample, 
+                      "ご家族やペットも一緒にイラストに入れることができます。"
+                    )}
+                  >
+                    Sample Image 
+                  </button>
+                </p>
+                <li>
+                  <span className="option-name">③お写真にないアイテムの追加</span>
+                  <span className="option-price">+¥500/個〜</span>
+                </li>
+                <p className="option-description">
+                  (追加アイテムによりお値段が変動しますので、ご相談ください)
+                  <button 
+                    className="sample-link" 
+                    onClick={() => openModal(
+                      "アイテム追加サンプル", 
+                      addItemSample, 
+                      "お写真にない小物や思い出のアイテムを追加できます。"
+                    )}
+                  >
+                    Sample Image
+                  </button>
+                </p>
+                <li>
+                  <span className="option-name">④和装</span>
+                  <span className="option-price">+¥1,000</span>
+                </li>
+                <p className="option-description">
+                  <button 
+                    className="sample-link" 
+                    onClick={() => openModal(
+                      "和装サンプル", 
+                      kimonoSample, 
+                      "和装での描写も可能です。細かい柄などは別途料金がかかります。"
+                    )}
+                  >
+                    Sample Image
+                  </button>
+                </p>
+                <li>
+                  <span className="option-name">⑤服装の細かい柄の描き込み</span>
+                  <span className="option-price">+¥1,000/人〜</span>
+                </li>
+                <p className="option-description">
+                  (ドレスのレースやタキシードのチェック柄、和装の柄など)
+                  <button 
+                    className="sample-link" 
+                    onClick={() => openModal(
+                      "服装の細かい柄サンプル", 
+                      detailSample, 
+                      "ドレスのレースやタキシードのチェック柄、和装の柄など細かいディテールを描き込みます。"
+                    )}
+                  >
+                    Sample Image
+                  </button>
+                </p>
+               
+                <li>
+                  <span className="option-name">⑥おふたりのイラストのみを背景透過データで納品</span>
+                  <span className="option-price">+¥500</span>
+                </li>   
+              </ul>
                 </div>
               </div>
 
@@ -130,7 +205,6 @@ const MarriageCertificate: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="price-example">
                 <p>料金例：</p>
                 <p>ゲストの人数が0〜20名の場合<br/>
@@ -158,15 +232,6 @@ const MarriageCertificate: React.FC = () => {
               <p className="price-note">※現物納品の場合、お住まいの地域によって送料が異なります。</p>
             </div>
           </div>     
-          <div className="price-detail-item">
-          <h3>その他オプション</h3>
-                <ul className="option-list">
-                  <li>
-                    <span className="option-name">おふたりのイラストのみを背景透過データで納品する場合</span>
-                    <span className="option-price">+¥500</span>
-                  </li>
-                </ul>
-              </div>
           </div>   
       </section>
 

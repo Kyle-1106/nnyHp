@@ -86,7 +86,7 @@ const WeddingIllustration: React.FC = () => {
 
       <section className="wedding-price">
         <h2>料金</h2>
-        <p>データ納品と現物納品で料金が変わります</p>
+
           <div className="price-content">
           <div className="price-details">
             <div className="price-item">
@@ -133,14 +133,14 @@ const WeddingIllustration: React.FC = () => {
               <ul className="option-list">
                 <li>
                   <span className="option-name">①お急ぎコース</span>
-                  <span className="option-price">+¥2,000</span>
+                  <span className="option-price">+¥2,000〜</span>
                 </li>
                 <p className="option-description">
-                  1週間程度での納品をご希望の場合、こちらを選択してください。他のお客様とのスケジュールとの兼ね合いにより、お受けできない場合もございますので、あらかじめご了承ください。
+                  他のお客様よりも優先的に制作させていただきます。ただし、他のお客様とのスケジュールとの兼ね合いにより、お受けできない場合もございますので、あらかじめご了承ください。InstagramのDMにてお問い合わせください。
                 </p>
                 <li>
                   <span className="option-name">②人物、ペットの追加</span>
-                  <span className="option-price">+¥1,000/人</span>
+                  <span className="option-price">+¥2,000/人</span>
                 </li>
                 <p className="option-description">
                   <button 
@@ -189,7 +189,7 @@ const WeddingIllustration: React.FC = () => {
                 </p>
                 <li>
                   <span className="option-name">⑤和装</span>
-                  <span className="option-price">+¥500</span>
+                  <span className="option-price">+¥1,000</span>
                 </li>
                 <p className="option-description">
                   <button 
@@ -205,7 +205,7 @@ const WeddingIllustration: React.FC = () => {
                 </p>
                 <li>
                   <span className="option-name">⑥服装の細かい柄の描き込み</span>
-                  <span className="option-price">+¥1,000/人</span>
+                  <span className="option-price">+¥1,000/人〜</span>
                 </li>
                 <p className="option-description">
                   (ドレスのレースやタキシードのチェック柄、和装の柄など)

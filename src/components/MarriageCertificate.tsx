@@ -162,9 +162,12 @@ const MarriageCertificate: React.FC = () => {
                     Sample Image
                   </button>
                 </p>
-               
                 <li>
-                  <span className="option-name">⑥おふたりのイラストのみを背景透過データで納品</span>
+                <span className="option-name"> ⑥ブーケ</span>
+                <span className="option-price">+¥1,000~</span>           
+                </li>
+                <li>
+                  <span className="option-name">⑦おふたりのイラストのみを背景透過データで納品</span>
                   <span className="option-price">+¥500</span>
                 </li>   
               </ul>

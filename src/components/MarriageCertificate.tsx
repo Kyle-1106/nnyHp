@@ -93,9 +93,7 @@ const MarriageCertificate: React.FC = () => {
                   <span className="option-name">①お急ぎコース</span>
                   <span className="option-price">+¥2,000〜</span>
                 </li>
-                <p className="option-description">
-                  他のお客様よりも優先的に制作させていただきます。ただし、他のお客様とのスケジュールとの兼ね合いにより、お受けできない場合もございますので、あらかじめご了承ください。InstagramのDMにてお問い合わせください。
-                </p>
+                <p className="option-description">他のお客様よりも優先的に制作させていただきます。ただし、他のお客様とのスケジュールとの兼ね合いにより、お受けできない場合もございますので、あらかじめご了承ください。<a href="https://lin.ee/lnouLVW" className="line-link" target="_blank" rel="noopener noreferrer">公式ライン</a>にてお問い合わせください。</p>
                 <li>
                   <span className="option-name">②人物、ペットの追加</span>
                   <span className="option-price">+¥2,000/人</span>
@@ -246,13 +244,7 @@ const MarriageCertificate: React.FC = () => {
               <div className="step-number">1</div>
               <div className="step-details">
                 <h3>お問い合わせ</h3>
-                <p>InstagramのDMよりお問い合わせください。</p>
-                <p>DM例)<br />
-見積もり依頼<br />
-・ご希望納期<br />
-・結婚式の日取り<br />
-・イラストにしたいお写真<br />
-（まだ決まっていない場合や迷っている場合などはそのようにお伝えいただければ、お写真選びから一緒にさせていただきます）</p>
+                <p><a href="https://lin.ee/lnouLVW" className="line-link" target="_blank" rel="noopener noreferrer">公式ライン</a>よりお問い合わせください。</p>
               </div>
             </div>
             <div className="flow-step">
@@ -293,10 +285,7 @@ const MarriageCertificate: React.FC = () => {
       
       <section className="certificate-contact">
         <h2>お問い合わせ</h2>
-        <p>結婚証明書のご依頼・ご質問は、InstagramのDMよりお気軽にお問い合わせください。</p>
-        <a href="https://www.instagram.com/nny.illustration/" target="_blank" rel="noopener noreferrer" className="instagram-link">
-          <FontAwesomeIcon icon={faInstagram} /> @nny.illustration
-        </a>
+        <p>結婚証明書のご依頼・ご質問は、<a href="https://lin.ee/lnouLVW" className="line-link" target="_blank" rel="noopener noreferrer">公式ライン</a>よりお気軽にお問い合わせください。</p>
       </section>
 
       {/* オプションモーダル */}

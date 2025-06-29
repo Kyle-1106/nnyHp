@@ -18,7 +18,7 @@ const CancellationPolicy: React.FC = () => {
         <h2>1. キャンセルについて</h2>
         <p>
           お客様のご都合によるキャンセルの場合、以下のキャンセル料が発生いたします。
-          なお、キャンセルのご連絡はInstagramのDMにてお願いいたします。
+          なお、キャンセルのご連絡は公式ラインにてお願いいたします。
         </p>
         
         <div className="cancellation-table">

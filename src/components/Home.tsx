@@ -257,7 +257,7 @@ const Home: React.FC = () => {
     {
       number: "1",
       title: "お問い合わせ",
-      description: "InstagramのDMよりお問い合わせください。ご希望のデザインや内容、納期などをお伝えください。",
+      description: "公式ラインよりお問い合わせください。ご希望のデザインや内容、納期などをお伝えください。",
       image: orderStep1
     },
     {
@@ -635,13 +635,7 @@ const Home: React.FC = () => {
                   <div className="step-number">1</div>
                   <div className="step-details">
                     <h3>お問い合わせ</h3>
-                    <p>InstagramのDMよりお問い合わせください。</p>
-                    <p>DM例)<br />
-見積もり依頼<br />
-・ご希望納期<br />
-・結婚式の日取り<br />
-・イラストにしたいお写真<br />
-（まだ決まっていない場合や迷っている場合などはそのようにお伝えいただければ、お写真選びから一緒にさせていただきます）</p>
+                    <p><a href="https://lin.ee/lnouLVW" className="line-link" target="_blank" rel="noopener noreferrer">公式ライン</a>よりお問い合わせください。ご希望のデザインや内容、納期などをお伝えください。</p>
                   </div>
                 </div>
                 <div className="flow-step">
@@ -701,7 +695,7 @@ const Home: React.FC = () => {
         <div className="faq-contact">
           <p>
             その他ご不明な点がございましたら、<br />
-            InstagramのDMよりお問い合わせください！
+            <a href="https://lin.ee/lnouLVW" className="line-link" target="_blank" rel="noopener noreferrer">公式ライン</a>よりお問い合わせください！
           </p>
         </div>
       </section>

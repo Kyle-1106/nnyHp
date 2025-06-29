@@ -103,8 +103,7 @@ const WeddingIllustration: React.FC = () => {
 
             <div className="price-item">
               <h3>現物納品</h3>
-              <p className="price-description">印刷するボードの選び方がわからなかったり、ご自身での印刷が不安な方におすすめです。<br />
-                お住まいの地域やキャンバスのサイズ、印刷枚数に応じて料金が変動しますので、詳しくはInstagramのDMよりお問い合わせください。</p>
+              <p className="price-description">印刷するボードの選び方がわからなかったり、ご自身での印刷が不安な方におすすめです。<br />お住まいの地域やキャンバスのサイズ、印刷枚数に応じて料金が変動しますので、詳しくは<a href="https://lin.ee/lnouLVW" className="line-link" target="_blank" rel="noopener noreferrer">公式ライン</a>よりお問い合わせください。</p>
               <p className="price-welcome-board">⚪︎ウェルカムボード</p>
               <p className="price-amount">¥16,000〜</p>
               <p>※こちらの料金はイラスト代+印刷代+送料のお値段です。</p>
@@ -123,7 +122,7 @@ const WeddingIllustration: React.FC = () => {
                 <p className="price-detail-item">納品形式：ケント紙(厚め)※ボールペンなどで筆記可能</p>
                 <ul className="price-detail-list">
                   <li>サイズ：91×55mm(一般的な名刺サイズ)</li>
-                  <li>印刷枚数は~100枚からお選びいただけます。<br />100枚以上をご希望の場合は、InstagramのDMよりお問い合わせください。</li>
+                  <li>印刷枚数は~100枚からお選びいただけます。<br />100枚以上をご希望の場合は、公式ラインよりお問い合わせください。</li>
                 </ul>
               </div>
             </div>
@@ -135,9 +134,7 @@ const WeddingIllustration: React.FC = () => {
                   <span className="option-name">①お急ぎコース</span>
                   <span className="option-price">+¥2,000〜</span>
                 </li>
-                <p className="option-description">
-                  他のお客様よりも優先的に制作させていただきます。ただし、他のお客様とのスケジュールとの兼ね合いにより、お受けできない場合もございますので、あらかじめご了承ください。InstagramのDMにてお問い合わせください。
-                </p>
+                <p className="option-description">他のお客様よりも優先的に制作させていただきます。ただし、他のお客様とのスケジュールとの兼ね合いにより、お受けできない場合もございますので、あらかじめご了承ください。<a href="https://lin.ee/lnouLVW" className="line-link" target="_blank" rel="noopener noreferrer">公式ライン</a>にてお問い合わせください。</p>
                 <li>
                   <span className="option-name">②人物、ペットの追加</span>
                   <span className="option-price">+¥2,000/人</span>
@@ -272,11 +269,7 @@ const WeddingIllustration: React.FC = () => {
                   
                   <p className="plan-price">¥20,000〜</p>
                   <div className="plan-details">
-                    <p>セット内容：</p>
-                    <ul>
-                      <li>ウェルカムボード <br />印刷：キャンバスプリント <br />サイズ：A4,A3サイズ</li>
-                      <li>サンキューカード ~100枚（91×55mmサイズ）<br />※ 100枚以上をご希望の方は個別にInstagramのDMよりお問い合わせください</li>
-                    </ul>
+                    <p>セット内容：<ul><li>ウェルカムボード <br />印刷：キャンバスプリント <br />サイズ：A4,A3サイズ</li><li>サンキューカード ~100枚（91×55mmサイズ）<br />※ 100枚以上をご希望の方は個別に公式ラインよりお問い合わせください</li></ul></p>
                     <p className="plan-description">
                     ウェルカムボード（¥16,000〜）とサンキューカード（¥11,000〜）をセットでご依頼いただくと ¥20,000〜のご案内になります。<br />
 個別にご注文いただくよりも、お得な価格でご案内しております。<br />
@@ -303,13 +296,7 @@ nayuがイラスト作成からイラストの印刷までまるっとお手伝�
               <div className="step-number">1</div>
               <div className="step-details">
                 <h3>お問い合わせ</h3>
-                <p>InstagramのDMよりお問い合わせください。</p>
-                <p>DM例)<br />
-見積もり依頼<br />
-・ご希望納期<br />
-・結婚式の日取り<br />
-・イラストにしたいお写真<br />
-（まだ決まっていない場合や迷っている場合などはそのようにお伝えいただければ、お写真選びから一緒にさせていただきます）</p>
+                <p><a href="https://lin.ee/lnouLVW" className="line-link" target="_blank" rel="noopener noreferrer">公式ライン</a>よりお問い合わせください。</p>
               </div>
             </div>
             <div className="flow-step">
@@ -349,10 +336,7 @@ nayuがイラスト作成からイラストの印刷までまるっとお手伝�
 
       <section className="wedding-contact">
         <h2>お問い合わせ</h2>
-        <p>ご不明な点がございましたら、InstagramのDMよりお問い合わせください。</p>
-        <a href="https://www.instagram.com/nny.illustration/" target="_blank" rel="noopener noreferrer" className="instagram-link">
-          <FontAwesomeIcon icon={faInstagram} /> @nny.illustration
-        </a>
+        <p>ご不明な点がございましたら、<a href="https://lin.ee/lnouLVW" className="line-link" target="_blank" rel="noopener noreferrer">公式ライン</a>よりお問い合わせください。</p>
       </section>
 
       {/* オプションモーダル */}

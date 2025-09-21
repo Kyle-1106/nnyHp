@@ -216,19 +216,13 @@ const MarriageCertificate: React.FC = () => {
 
           <div className="price-item">
             <h3>現物納品</h3>
-            <p className="price-amount">¥18,000~</p>
+            <p className="price-amount">¥15,700~</p>
             <div className="price-description">
               <p>基本料金に含まれるもの：</p>
               <p>①データ納品の全内容</p>
               <p>②高級感のある上質紙厚紙印刷</p>
               <p className="price-note">※サイズはA3サイズです</p>
-              <p>③送料</p>
-              
-              <div className="price-example">
-                <p>料金例(関東在住の方)：</p>
-                <p>基本料金(オプションなし)+キャンドル(0~20名の場合)+A3サイズ+送料<br/></p>
-                <strong>¥19,000</strong>
-              </div>
+              <p className="price-note">※送料は別です</p>
 
               <p className="price-note">※現物納品の場合、お住まいの地域によって送料が異なります。</p>
             </div>

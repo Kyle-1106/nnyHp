@@ -105,18 +105,19 @@ const WeddingIllustration: React.FC = () => {
               <h3>現物納品</h3>
               <p className="price-description">印刷するボードの選び方がわからなかったり、ご自身での印刷が不安な方におすすめです。<br />お住まいの地域やキャンバスのサイズ、印刷枚数に応じて料金が変動しますので、詳しくは<a href="https://lin.ee/lnouLVW" className="line-link" target="_blank" rel="noopener noreferrer">公式ライン</a>よりお問い合わせください。</p>
               <p className="price-welcome-board">⚪︎ウェルカムボード</p>
-              <p className="price-amount">¥16,000〜</p>
-              <p>※こちらの料金はイラスト代+印刷代+送料のお値段です。</p>
+              <p className="price-amount">A3:¥14,100〜</p>
+              <p className="price-amount">A4:¥12,800〜</p>
+
+              <p>※こちらの料金はイラスト代+印刷代お値段です。(送料は別です)</p>
               <div className="price-description">
                 <p className="price-detail-item">内容：おふたりのイラスト,オプション設定の背景や文字</p>
                 <p className="price-detail-item">納品形式：キャンバスプリント</p>
                 <ul className="price-detail-list">
-                  <li>サイズ：A4 / A3 </li>
                 </ul>
               </div>
               <p className="price-thankyou-card">⚪︎サンキューカード</p>
-              <p className="price-amount">¥11,000〜</p>
-              <p>※こちらの料金はイラスト代+印刷代+送料のお値段です。</p>
+              <p className="price-amount">¥11,600〜</p>
+              <p>※こちらの料金はイラスト代+印刷代お値段です。(送料は別です)</p>
               <div className="price-description">
                 <p className="price-detail-item">内容：おふたりのイラスト,オプション設定の背景や文字</p>
                 <p className="price-detail-item">納品形式：ケント紙(厚め)※ボールペンなどで筆記可能</p>
